@@ -1,0 +1,10 @@
+body {
+	background: url('../gfx/background.png');
+  font-family: Tahoma;
+}
+.float-right {
+  float: right;
+}
+.title {
+  text-align: center;
+}

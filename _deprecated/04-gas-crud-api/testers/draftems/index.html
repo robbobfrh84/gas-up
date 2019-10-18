@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title> SPA </title>
+
+<script src='https://pair-programmers.github.io/gas-stack/04-gas-crud-api/gas_crud_v0.0.js'></script>
+<link rel="shortcut icon" href="gfx/cog.png"/>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/landing.css">
+
+</head>
+
+<body>
+  <button class='home_menu' onclick='_page("home")'>
+    🍦 Vanilla SPA
+  </button>
+  <div class='float-right'> Menu:
+    <button class='home_menu' onclick='_page("two")'>Page 2</button>
+  </div>
+  <hr>
+  <div id='page-landing' style='display: block'></div>
+  <div id='page-home' style='display: none'></div>
+  <div id='page-two' style='display: none'></div>
+  <footer id='my-custom-footer'> &copy; Bob Main </footer>
+</body>
+
+<script src='js/onload.js'></script>
+<script src='js/pages.js'></script>
+<script src='pages/page_landing.js'></script>
+<script src='pages/page_home.js'></script>
+<script src='pages/page_two.js'></script>
+</html>

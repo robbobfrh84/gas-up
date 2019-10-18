@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <title> part2-public-crud </title>
+  <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/simpleLoader.css">
+</head>
+<body>
+  <h1> Basic CRUD for your google script API (Create, Read, Update, Delete) </h1>
+  <hr>
+  Recommend A Movie: <br>
+  <div class="relative">
+    <div class="sLoader" id='loader2' style='display: none'> <div></div><div></div><div></div> </div>
+  </div>
+  <div id="input-submit" style="padding: 5px;">
+    <input id='movie-name' placeholder="...Movie Name">
+    <input id='movie-notes' placeholder="...Notes or Quotes?" maxlength="75"> <br>
+    <button onclick='_addRec("Movies to watch")'>Submit</button>
+  </div>
+  <hr>
+  <div class="relative">
+    <div class="sLoader" id='loader1' style='display: none'> <div></div><div></div><div></div> </div>
+  </div>
+  <div id='tables'></div>
+</body>
+<script src='gas_crud_api.js'></script>
+<script src='main.js'></script>
+</html>

@@ -1,0 +1,10 @@
+#my-custom-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  background-color: rgba(0,0,0,0.1);
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+}

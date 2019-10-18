@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en">
+<title> ? title ? </title> <!-- <link rel="icon" href="link/or/path">  -->
+<head>
+  <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src='https://pair-programmers.github.io/gas-stack/04-gas-crud-api/gas_crud_v0.0.js'></script> -->
+  <script src='gas_crud_v0.0.js'></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+  /* 👉 👉 👉 NOTES 👈 👈 👈
+    - Uses `gas-crud-api.gsheet`, link: https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0
+    - Mess around with this script & api & sheet for testing / P.O.C!
+    - BUT Return when done
+      - main { key1: "val1", key2: "val2", _Id: ... }
+      - & remove all other sheets.
+  */
+
+  var _gas = new GAS('https://script.google.com/macros/s/AKfycby6WeO0RbyX0MDmPLw2mMwNJpBmtn7buSGPjfmStDg64cc_wM8K/exec')
+
+  window.onload = ()=>{
+
+/* 🌟 - - - - - READ - - - - - 🌟 */
+
+// READ all
+
+    // _gas.crud( "READ" , "all" ).then( payload => { console.log('do stuff with data!')})
+
+// READ sheet
+
+    // _gas.crud( "READ" , "sheet", {
+    //   sheetName: 'main',
+    // }).then( payload => { console.log('do stuff with data!')})
+
+// READ row
+
+    // _gas.crud( "READ" , "row", {
+    //   sheetName: 'main',
+    //   _Id: "asu8_jnjm0fju" // 🌟  this SHOULD Be the reserved row 2's id.
+    // }).then( payload => { console.log('do stuff with data!')})
+
+// READ cell
+
+    // _gas.crud( "READ" , "cell", {
+    //   sheetName: 'main',
+    //   cell: 'A1'
+    // }).then( payload => { console.log('do stuff with data!')})
+
+
+/* 🌟 - - - - - CREATE - - - - - 🌟 */
+
+// CREATE sheet
+
+    // _gas.crud( "CREATE" , "sheet", {
+    //   sheetName: 'Cool Sheet',
+    //   keys: ['name','age']
+    // }).then( payload => { console.log('do stuff with data!')})
+
+// CREATE addkeys
+
+    // _gas.crud( "CREATE" , "addkeys", {
+    //   sheetName: 'Cool Sheet',
+    //   keys: ['loc','gender']
+    // }).then( payload => { console.log('do stuff with data!')})
+
+// CREATE row
+
+    // _gas.crud( "CREATE" , "row", {
+    //   sheetName: 'Cool Sheet',
+    //   content: {
+    //     name: 'Greg',
+    //     age: 33,
+    //     loc: 'Alaska',
+    //     gender: 'Male'
+    //   }
+    // }).then( () => {
+    //   _gas.crud( "CREATE" , "row", {
+    //     sheetName: 'Cool Sheet',
+    //     content: {
+    //       name: 'Jen',
+    //       age: 34,
+    //       loc: 'Californa',
+    //       gender: 'Female'
+    //     }
+    //   })
+    // }).then( payload => { console.log('do stuff with data!')})
+
+/* 🌟 - - - - - UPDATE - - - - - 🌟 */
+
+    // _gas.crud( "UPDATE" , "row", { // !!⚠️ ACTUALLY CREATE ON SHEET Bob, 34, Austin, male
+    //   sheetName: 'Cool Sheet',
+    //   _Id: "SCuf_jnjm9lmg", //!!⚠️ replace with new id from sheet
+    //   content: {
+    //     age: 35,
+    //     gender: 'Old Man!',
+    //   }
+    // }).then( payload => { console.log('do stuff with data!')})
+
+    // _gas.crud( "UPDATE" , "cell", {
+    //   sheetName: 'main',
+    //   cell: 'A8',
+    //   content: 'Hello!'
+    // }).then( payload => { console.log('do stuff with data!')})
+
+    // _gas.crud( "UPDATE" , "cell", {
+    //   sheetName: 'main',
+    //   cell: 'A9',
+    //   date: 'Date()'
+    // }).then( () => {
+    //   _gas.crud( "UPDATE" , "cell", {
+    //     sheetName: 'main',
+    //     cell: 'B9',
+    //     increment: 1
+    //   })
+    // }).then( payload => { console.log('do stuff with data!')})
+
+/* 🌟 - - - - - DELETE - - - - - 🌟 */
+
+    // _gas.crud( "DELETE" , "row", {
+    //   sheetName: 'Cool Sheet',
+    //   _Id: "SCuf_jnjm9lmg", //!!⚠️ replace with new id from UPDATE ROW sheet
+    // }).then( payload => { console.log('do stuff with data!')})
+
+  }
+
+</script>
+</html>

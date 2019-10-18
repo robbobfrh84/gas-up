@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en">
+<title> ? title ? </title> <!-- <link rel="icon" href="link/or/path">  -->
+<head>
+  <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src='https://pair-programmers.github.io/gas-stack/04-gas-crud-api/gas_crud_v0.0.js'></script> -->
+  <script src='gas_crud_v0.0.js'></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+  var _gas = new GAS('<your url here>')
+
+  window.onload = ()=>{
+
+    _gas.crud( "CREATE" , "sheet", {
+      sheetName: 'Browser Created Sheet',
+      keys: ['name','age','...Other cool Fields']
+    }).then( payload => { console.log('do stuff with data!')})
+
+  }
+
+</script>
+</html>
