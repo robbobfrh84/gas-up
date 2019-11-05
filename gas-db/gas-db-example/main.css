@@ -1,0 +1,36 @@
+* {
+  color: #ccc;
+}
+body {
+  background-color: #333;
+}
+a {
+  color: pink;
+}
+button {
+  cursor: pointer;
+  color: #222;
+  font-size: 16px;
+  margin: 5px;
+}
+input {
+  color: #333;
+  font-size: 16px;
+  margin: 5px;
+}
+.sheetname {
+  width: 250px;
+  display: inline-block;
+}
+.action-btn {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+.remove-btn {
+  background-color: rgba(255,255,255,0.1);
+  width: 30px;
+  border-radius: 100%;
+  border: none;
+}

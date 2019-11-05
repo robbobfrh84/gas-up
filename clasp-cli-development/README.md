@@ -12,6 +12,7 @@ SEE: `clasp-dev-run-example` folder for example code.
 * Logs
 * Deploy
 * Make Public API Web App
+* Develop and re-deploy flow
 * Basic `clasp` CLI operations
 * Resources
 
@@ -203,7 +204,7 @@ Static logging
   * Gives you a ton more info about the request.
 
 ----
-# Deploy
+# Develop and reDeploy flow
 
 Get basic deploy info...
 * $`clasp deployments` > lists deployments of a script.
@@ -219,6 +220,24 @@ Redeploy
 Undeploy
 * $`clasp deployments` > see all ids.
 * $`clasp undeploy <ID>`
+
+After you `clasp push` your changes...
+* $`clasp deploy`
+  * Note: this will create a new version. COPY that id.
+
+* Likely, you'll really be pushing and deploying at the same time, same version.
+* $`clasp push`, then
+* $`clasp deploy -i <the version id>` or whatever version you want to deploy from. Note, you might need to check the browser ui to get the most current version
+  * Example: `clasp deploy -i /s/AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`
+
+#### ALL IN ONE!
+- $`clasp push; clasp deploy -i AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`
+
+#### Browser link !Important
+* you'll wanna make sure you're using the correct deployment link to see changes on your browser code. So...
+  * In the example above the deploy id I used was from version 3.
+  * Go to the console and select Publish: 'deploy from manifest'
+  * version three is the link you'll now want in your client side code.
 
 ----
 # Make Public API Web App

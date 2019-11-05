@@ -2,31 +2,47 @@
 
 ### quick start
 
-If you already have a Google Sheet...
+Create a google sheet to be your Database
+- Visit `sheets.google.com` (you may need to login first)
+- Under *Start a new spreadsheet* select [blank]
+- rename "Untitled spreadsheet" to whatever you want
+  - We'll use `gas-db-example` for this guide.
+
+Add Database API code to Sheet.
+* In your new sheet, select: *Tools* > *Script Editor*
+* Copy / Paste entire contents of `gas-db_v1.0.gs`(found in this folder)
+* *Save* Your Script
+  * Note: development code found [here](https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0)
+
+Publish your API
+* In the Script Editor, select: *Publish* > *Deploy as web app*
+* Find and select: *"Who has access to the app"* to *"Everyone, even anonymous"*.
+  * NOTE: This is just for the software so it can be accessed programmatically. NOT access to view the google spreadsheet itself. That's still private.
+* Select: *Review Permissions*
+* Log into your gmail account
+* Now, Select *advanced* to authorize > *continue to unsafe*
+* The url is not the global url you want. For that, you need to make your API global.
+
+Make API global
+* In the Script Editor, select: *Publish* > *Deploy from minifest* >
+* Then, select: *'web app meta-version'* >
+* !copy link next to GLOBE
+
+Congratulations! this is your API's URL! Save it to add to your front-end code!
+
+
+### What if you already have a google sheet you'd like to add as your db?
+
+Open your Google Sheet...
 * With your sheet open > file > download as > Microsoft Excel (.xlsx)
 * Save file somewhere in your google drive.
 
-Add Google Apps Script code(.gs):
-* Option 1: Copy template
-  * Copy Google Sheet Template
-  * link to this [google sheet](https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0)
-  * File > Make a Copy > Rename it: 'whatever'
-    * If you have a saved .xlsx sheet > File > Import > find your .xlsx
-    * select > Replace your spreadsheet
-* Option 2: copy/paste code.
- * Create a new google sheet > sheets.google.com
- * Tools > Script Editor
- * Copy / Paste entire contents of `crud_v0.0.gs`(found in this repo/folder) or most recent version into code.js(replace any code in text area).
-
-Publish your api
-* With your new sheet open > Tools > Script Editor(you may already be there)
-* Publish > Deploy as web app > select advanced to authorize > continue to unsafe
-  * Select: "Who has access to the app" to > `Everyone, even anonymous`. This is just for the software so it can be accessed programmatically. NOT access to view the google spreadsheet itself. That's still private. 
-* Publish > Deploy from minifest > 'web app meta-version' > copy link next to GLOBE
-* Paste url into GAS class and go!
+In your new Google Sheet
+* File > Import > find your .xlsx
+* select > Replace your spreadsheet
 
 ---
-# API CRUD REQUESTS
+# API CRUD REQUESTS: Add to browser-side code
 
 ### Basic Example
 ```javascript

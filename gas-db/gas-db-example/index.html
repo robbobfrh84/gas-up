@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en">
+<title> gas-db-example </title> <!-- <link rel="icon" href="link/or/path">  -->
+<head>
+  <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="gas-db_v1.0.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loading-container">
+      <div class="loading"></div>
+    </div>
+  </div>
+
+  <nav style="float:right;">
+    <a href="https://docs.google.com/spreadsheets/d/1raeRyzjpuNWr4rfyflYQ98HJQIE0YpekfTQN3DQJKCg/edit#gid=350899621">
+      🔗Google Sheet DB 🔗
+    </a>
+  </nav>
+
+  <button onclick="api('READ', 'all')">
+    'READ', 'all'
+  </button> *Sheets
+
+  <hr>
+
+  <input placeholder="...new sheet name" id="sheetname">
+  <button onclick="addKey()" class="action-btn"> + Add Key </button>
+  <br>
+  <section id="newSheetKeys"></section>
+  <button onclick="api('CREATE', 'sheet')">
+    'CREATE', 'sheet'
+  </button>
+
+  <hr>
+
+  <section id="sheets"></section>
+
+</body>
+<script>
+
+  var _gas = new GAS('https://script.google.com/macros/s/AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y/exec')
+
+  function api(action, scope, options){
+
+    if (!options) options = {}
+
+    if (action == 'CREATE') {
+      if (scope === 'sheet') {
+        options.sheetName = sheetname.value
+        options.keys = Array.from(document.querySelectorAll(".keys")).map(k=>k.value)
+      }
+    }
+
+    loader.style.display = 'block';
+    _gas.crud(action, scope, options)
+      .then( payload => {
+        if (action === "READ") {
+          if (scope === 'all') buildSheets(payload)
+        }
+        if (action == 'CREATE') {
+          if (scope === 'sheet') alert(options.sheetName+" has been created!")
+        }
+      })
+      .finally( payload => loader.style.display = 'none')
+
+  }
+
+  function buildSheets(data){
+    sheets.innerHTML = `
+      <hr> <h2> <u> Sheets: </u> </h2>
+    `
+    for (const sheet in data) {
+      sheets.innerHTML += `
+        <div class="sheetname"> ${sheet}: </div>
+        <button onclick="api('READ', 'sheet', {sheetName: '${sheet}'})">
+          'READ', 'sheet', {sheetName: '${sheet}'}
+        </button>
+        <br>
+      `
+    }
+  }
+
+  function addKey() {
+    let keys = Array.from(document.querySelectorAll(".keys")).map(k=>k.value)
+    keys.push('')
+    newSheetKeys.innerHTML = ""
+    keys.forEach((key, i) => {
+      newSheetKeys.innerHTML += `
+        <div id="key-${i}">
+          &nbsp; key: <input placeholder="...field" class="keys" value="${key}">
+          <button class="remove-btn" onclick="removeKey('key-${i}')" >❌</button>
+          <br>
+        </div>
+      `
+    })
+  }
+
+  function removeKey(id){
+    const key = document.getElementById(id)
+    key.innerHTML = ""
+  }
+
+  window.onload = ()=>{
+
+    // _gas.crud( "READ" , "all", {
+    //   sheetName: "Permissions"
+    // }).then( payload => {
+    //   console.log("payload :", payload)
+    // })
+
+    // _gas.crud( "READ" , "all", )
+    //   .then( payload => {
+    //     console.log("payload :", payload)
+    //   })
+
+    // _gas.crud( "CREATE" , "sheet", {
+    //   sheetName: 'B2',
+    //   keys: ['name','age','...Other cool Fields']
+    // }).then( payload => { console.log('do stuff with data!')})
+
+    // _gas.crud( "READ" , "sheet", {
+    //   sheetName: 'Browser Created Sheet',
+    // }).then( payload => {
+    //   console.log("payload :", payload)
+    // })
+
+    // _gas.crud( "CREATE" , "row", {
+    //   sheetName: 'Browser Created Sheet',
+    //   content: {
+    //     name: "Bob",
+    //     age: 35
+    //   }
+    // }).then( payload => {
+    //   console.log("payload :", payload)
+    // })
+
+  }
+
+
+
+</script>
+</html>
