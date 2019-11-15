@@ -3,6 +3,9 @@
 - ✅create a desktop to build and test
 - ✅Review clasp and add
 - ✅Handle sheet create without keys...
+- move github domain hosting to tutorials/examples
+
+gas-db-example
 - Delete sheet
 - Add fields to sheet (how do we demostrate adding field on create sheet?)
 
