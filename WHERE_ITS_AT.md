@@ -1,24 +1,31 @@
-# To Do
+# Next... 3-ish
+- breakup .js functions into logical files.
+- {add key} event forces focuses in new input box.
+- {create new sheet} collapses, clears and add a message telling user to select {get all the sheets}
 
-- ✅create a desktop to build and test
-- ✅Review clasp and add
+# gas-db-example ToDo
 - ✅Handle sheet create without keys...
+- handle a sheet with no name. allow it and create it, and return `sheet16` as name.
+- update create sheet to have dynamic function builder with inputs ?
+- handle Delete sheet (gas side)
+- delete sheet (client)
+
+### Misc. ToDo
 - move github domain hosting to tutorials/examples
 
-gas-db-example
-- Delete sheet
-- Add fields to sheet (how do we demostrate adding field on create sheet?)
-
-### Examples To Do
-- Create READ all Sheets.
 
 # gas-db-example Goals
 
-- The script in the example will be copied and become the **gas-db_v1.0** scripts folder.
-- Build out this example AND WIKI same time.
-- Even link examples in wiki to actual gas-db-example code folder.
-- add delete sheet!
+The idea is to build this out to be a complete example of all the functions and, to create the wiki in parallel.
+- Also, it'd be fun to create a seeding function that runs an async chain that starts with deleting everything and building some fun 2-3 sheet table sets!
+- ALSO, this could be roughly the primary function of a website with an added part where you plug in the link to your own sheet (A guide to create is included)
 
-- How to I show getting started/readme?
-  - example
-    - add link to gas-db-example google sheet.
+- First, build all the use-cases out here.
+- Then, refactor the gas-db so that changes in this gas-code become the primary files in a new `gas-code` folder OUTSIDE of the `gas-db-example` folder
+  - And, update the minified...
+- Build out this example AND WIKI same time.
+  - link examples in wiki to actual gas-db-example code folder.
+
+
+Thoughts on name...
+- The long name in the header is nice, but i still like gas-stack. it just rolls of the tongue. but i want to say "Google Apps Script & Sheet Data Storage"

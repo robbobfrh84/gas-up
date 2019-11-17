@@ -1,0 +1,88 @@
+* {
+  color: #ccc;
+  margin: 7px;
+  font-family: Helvetica;
+}
+body {
+  background-color: #333;
+}
+a {
+  color: pink;
+}
+button {
+  cursor: pointer;
+  color: #222;
+  font-size: 16px;
+  border: none;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  vertical-align: middle;
+}
+button:hover {
+  opacity: 0.75;
+  transition: opacity .3s;
+}
+input {
+  color: #333;
+  font-size: 16px;
+  margin: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px black;
+  border-radius: 3px;
+  padding: 5px;
+}
+.inline-block {
+  display: inline-block;
+}
+.align-top {
+  vertical-align: top;
+}
+
+/* CREATE SHEET */
+.btn2 {
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  height: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: none;
+  color: white;
+}
+.remove-btn {
+  background-color: rgba(255,255,255,0.1);
+  width: 30px;
+  border-radius: 100%;
+  border: none;
+  padding-left: 7.5px;
+  padding-top: 0px;
+}
+.get {
+  background-color: darkorange;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+.create {
+  background-color: green;
+  color: white;
+}
+.delete {
+  background-color: brown;
+  color: white;
+}
+
+/* SHEETS */
+.sheet-container {
+  background-color: rgba(255,255,255,0.1)
+}
+.get-sheet-btn {
+  width: 250px;
+}
+.code-block {
+  background-color: rgba(0,0,0,0.1);
+  width: 250px;
+}
+.delete-sheet-btn {
+  width: 120px;
+}
