@@ -26,6 +26,8 @@ The idea is to build this out to be a complete example of all the functions and,
 - Build out this example AND WIKI same time.
   - link examples in wiki to actual gas-db-example code folder.
 
+Auth: *After* this organization of build out is set, create an MVP to do for auth.
+- See `auth diagram.jpg`
 
 Thoughts on name...
 - The long name in the header is nice, but i still like gas-stack. it just rolls of the tongue. but i want to say "Google Apps Script & Sheet Data Storage"
