@@ -14,6 +14,8 @@ If you're a front-end developer looking to prototype with logins, databases and 
 ----
 # Developing Google Apps Scripts with `clasp` CLI
 * See: `clasp-cli-development` folder for guides
+  - Includes a `quick-start` guide 
+  - {!BOB👀} create quickstart with gas-stack.
 
 ----
 ### Resources:
