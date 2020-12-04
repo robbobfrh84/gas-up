@@ -1,6 +1,6 @@
-# Developing with a basic Google Apps Scripts CRUD API (Create, Read, Update, Delete)
+# Documentation
 
-### quick start
+### Guide to getting started with a gas-stack project
 
 Create a google sheet to be your Database
 - Visit `sheets.google.com` (you may need to login first)

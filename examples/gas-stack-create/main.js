@@ -1,5 +1,3 @@
-// var _gas = new GAS('https://script.google.com/macros/s/AKfycby_lTu86Fl8EjJ3lJZ6MgJ8RHWsn5IphTTDf2KZEMLPN2TfzYTk/exec')
-
 var _gas = new GAS('https://script.google.com/macros/s/AKfycbzY-MGz7l2yDHWMhFFIt4nOHR270wEhQuwDPZG7VlDNR58OvDM/exec')
 
 function api(action, scope, options){

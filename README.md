@@ -1,9 +1,9 @@
-# gas-db (Google App Scripts with Google Sheets as DB)
+# gas-stack (Google App Scripts with Google Sheets for data storage)
 If you're a front-end developer looking to prototype with logins, databases and APIs: consider some GAS. This is a light weight (and uh, free) way to create **live** full-stack web application.
 
 #### It's all driven through your gmail google drive account.
-* DBs: Google sheets
-* API: Lives in the sheet's Google App Scripts > Tool > Script Editor.
+* Data Storage: Google sheets
+* API: Lives in the Google sheet's App Scripts ( Tool > Script Editor ).
 * See: `gas-db` folder for guides
 
 ----
@@ -14,7 +14,7 @@ If you're a front-end developer looking to prototype with logins, databases and 
 ----
 # Developing Google Apps Scripts with `clasp` CLI
 * See: `clasp-cli-development` folder for guides
-  - Includes a `quick-start` guide 
+  - Includes a `quick-start` guide
   - {!BOB👀} create quickstart with gas-stack.
 
 ----
