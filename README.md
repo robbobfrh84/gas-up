@@ -4,7 +4,7 @@ If you're a front-end developer looking to prototype with logins, databases and 
 #### It's all driven through your gmail google drive account.
 * Data Storage: Google sheets
 * API: Lives in the Google sheet's App Scripts ( Tool > Script Editor ).
-* See: `gas-db` folder for guides
+* See: [Documentation](https://github.com/robbobfrh84/gas-stack/tree/master/_documention) for a getting started guide.
 
 ----
 # Github Domain Hosting
