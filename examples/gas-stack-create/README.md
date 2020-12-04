@@ -1,3 +1,10 @@
+!UPDATE:
+- BOB👀you jumped back into this project on 12/4/2020...
+- After being away for a year or so...
+- couldn't figure out where I was at... or headed.
+- I "THINK" this is a UI website thing, that would be really nice if we pushed forward with making this a ligit tool.
+- BUT, NOT a development site. Looks like I got distracted creating UI while trying to learn CLASP.....
+
 # Dev Notes
 
 - Quick update line for version 3! `clasp push; clasp deploy -i AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`

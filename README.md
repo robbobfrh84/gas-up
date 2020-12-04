@@ -7,17 +7,6 @@ If you're a front-end developer looking to prototype with logins, databases and 
 * See: [Documentation](https://github.com/robbobfrh84/gas-stack/tree/master/_documention) for a getting started guide.
 
 ----
-# Github Domain Hosting
-* Examples for use with http://www.namecheap.com
-* See: `github-domain-hosting` folder for guides
-
-----
-# Developing Google Apps Scripts with `clasp` CLI
-* See: `clasp-cli-development` folder for guides
-  - Includes a `quick-start` guide
-  - {!BOB👀} create quickstart with gas-stack.
-
-----
-### Resources:
-This is the primary doc I've been using for google sheet manipulation with google scripts (.gs). Been having pretty good success with it.
-* https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet
+### Developing Google Apps Scripts with `clasp` CLI
+Note: this is a temporary folder while I transition from learning the in-and-outs of clasp CLI while creating a "clasp_development_flow_guide.md" in `gas-stack-development` for developing with gas-stack...
+- {!BOB👀} Move to `Tutorials_Examples` when finished.
