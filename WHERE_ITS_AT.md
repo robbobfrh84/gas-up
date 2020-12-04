@@ -12,7 +12,8 @@
 
 ### Misc. ToDo
 - move github domain hosting to tutorials/examples
-
+- Rebrand repo: decide on name(s) and update repo wide.
+  - I say stick with gas-stack its more memorable. NOTE: gas-db_v1.0 (change?)
 
 # gas-db-example Goals
 

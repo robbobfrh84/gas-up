@@ -27,7 +27,7 @@ NOTE: you'll have to do a hard refresh to see change
 - $`clasp logs --json`
 - $`clasp logs --watch`
 
-### Develope and Deploy
+### Develop and Deploy
 
 After you `clasp push` your changes...
 * $`clasp deploy`
