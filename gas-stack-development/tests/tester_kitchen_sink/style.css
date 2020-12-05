@@ -1,0 +1,16 @@
+td, th {
+  border: 1px solid #222;
+}
+th {
+  background-color: #ccc;
+}
+.top-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.tabs {
+  background-color: #ccc;
+  border-radius: 3px;
+  padding: 0px 5px;
+}

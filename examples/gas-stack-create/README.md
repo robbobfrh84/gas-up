@@ -5,6 +5,22 @@
 - I "THINK" this is a UI website thing, that would be really nice if we pushed forward with making this a ligit tool.
 - BUT, NOT a development site. Looks like I got distracted creating UI while trying to learn CLASP.....
 
+# To Do
+- {add key} event forces focuses in new input box.
+- {create new sheet} collapses, clears and add a message telling user to select {get all the sheets}
+- handle a sheet with no name. allow it and create it, and return `sheet16` as name.
+- update create sheet to have dynamic function builder with inputs ?
+- delete sheet (client)
+
+# gas-stack-development Goals
+
+The idea is to build this out to be a complete example of all the functions.
+- Also, it'd be fun to create a seeding function that runs an async chain that starts with deleting everything and building some fun 2-3 sheet table sets!
+- ALSO, this could be roughly the primary function of a website with an added part where you plug in the link to your own sheet (A guide to create is included)
+
+
+
+----- MOVE TO gas-stack-development
 # Dev Notes
 
 - Quick update line for version 3! `clasp push; clasp deploy -i AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`
