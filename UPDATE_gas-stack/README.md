@@ -1,8 +1,18 @@
-# Documentation
+# gas-stack (Google App Scripts with Google Sheets for data storage)
+If you're a front-end developer looking to prototype with logins, databases and APIs: consider some GAS. This is a light weight (and uh, free) way to create **live** full-stack web application.
+
+NOTE TO BOB:
+- WARNING! Don't change at this repo at all. it's done, and recorded in v1.0 folder in dev-gas-stackyou're working on 2.0!
+- You updated this to sit in the purist v1.0 state, and it's mirrored 👆.
+  - And, probably don't include this note in v2.0
+
+
+----
+# Documentation (Version 1.0)
 
 ### Guide to getting started with a gas-stack project
 
-Create a google sheet to be your Database
+Create a google sheet to be your database
 - Visit `sheets.google.com` (you may need to login first)
 - Under *Start a new spreadsheet* select [blank]
 - rename "Untitled spreadsheet" to whatever you want
@@ -12,7 +22,7 @@ Add Database API code to Sheet.
 * In your new sheet, select: *Tools* > *Script Editor*
 * Copy / Paste entire contents of `gas-db_v1.0.gs`(found in this folder)
 * *Save* Your Script
-  * Note: development code found [here](https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0)
+  * Note: development example sheet and code found [here](https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0)
 
 Publish your API
 * In the Script Editor, select: *Publish* > *Deploy as web app*
