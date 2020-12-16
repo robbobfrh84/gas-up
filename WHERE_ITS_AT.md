@@ -3,7 +3,7 @@
 - Review clasp cli development
 - Get all it working for tester_kitchen_sink
 - You're using gas-stack-create for tester_kitchen_sink, let's make it's own sheet.
-- Once basic flow is set, move gas-stack-create to shed
+- Once basic flow is set, move `examples/gas-stack-create` to shed
   - Make sure the readme is desolved.
 
 ### Dev To Do...
