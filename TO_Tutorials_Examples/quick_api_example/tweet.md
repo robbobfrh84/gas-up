@@ -1,3 +1,5 @@
+### Tweet 1
+
 🥧 Quick PI API 🥧
 
 🌍 script.google.com
@@ -18,6 +20,13 @@ Publish > Deploy from manifest
 
 
 
-----
+### Tweet 2
 
-https://github.com/Pair-Programmers/gas-stack/blob/master/clasp-cli-development/quickstart-example/get.js
+function doGet(e) {
+  const pie = JSON.stringify({
+    pie: Math.PI,
+    radius: parseInt(e.parameter.r),
+    circumference: (e.parameter.r * Math.PI) * 2
+  })
+  return ContentService.createTextOutput(pie).setMimeType(ContentService.MimeType.JSON)
+}

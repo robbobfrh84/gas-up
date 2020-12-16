@@ -2,13 +2,14 @@
 If you're a front-end developer looking to prototype with logins, databases and APIs: consider some GAS. This is a light weight (and uh, free) way to create **live** full-stack web application.
 
 NOTE TO BOB:
-- WARNING! Don't change at this repo at all. it's done, and recorded in v1.0 folder in dev-gas-stackyou're working on 2.0!
-- You updated this to sit in the purist v1.0 state, and it's mirrored 👆.
-  - And, probably don't include this note in v2.0
+- WARNING! Don't change at this repo at all. it's done, and recorded in original-gas-db folder in dev-gas-stack/versions.
+- You're working on gas-stack_v1.0!
+- You updated this to sit in the purist gas-db_v1.0 state, & it's mirrored 👆.
+  - And, probably don't include this note in gas-stack_v2.0
 
 
 ----
-# Documentation (Version 1.0)
+# Documentation (Version gas-db_1.0)
 
 ### Guide to getting started with a gas-stack project
 

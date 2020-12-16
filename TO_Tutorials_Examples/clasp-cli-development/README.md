@@ -29,17 +29,18 @@ SEE: `clasp-dev-run-example` folder for example code.
 
 
 ----
-# Setting up and authenticating for `run` methods in local development.
-This below directions are mostly a summery from: https://github.com/google/clasp
-* NOTE: Stick close to the order of events here. It's real easy to miss something when going through UI especially.. and then it not work...
+# Setting up and authenticating for `run` option in local development.
+These below directions are mostly a summery from: https://github.com/google/clasp
+* NOTE: Stick close to the order of events here. It's real easy to miss something when going through UI especially.. and then it'll not work...
 
 #### Create Project folder
 * $`mkdir clasp-dev-run-example ; cd clasp-dev-run-example`
 * $`clasp login`
-* $`clasp create clasp-dev-run-example`
+* $`clasp create clasp-dev-run-example` > select: "webapp"
+  - This action creates `appscript.json` file in your folder, And GAS link
 
-#### Add code for testing
-* $`clasp pull`
+#### Add code locally and push for testing in browser
+* $`clasp pull` > Will pull down the `code.js` form link
 * add 👇 to "Code.js" file after pull.
 ```javascript
 function myFunction() {
@@ -47,9 +48,11 @@ function myFunction() {
   return "Ok it works here"
 }
 ```
-* $`clasp push` + test code in UI
+* $`clasp push`
+  * Open GAS in browser tab, OR just run $`clasp open` in cli
   * ▶️ will run the selected "myFunction"
   * Then, *view* > *logs* (or ⌘+enter)
+  * NOTE: to run function locally, you'll need to log in. But you'll have to first create a google cloud project for that.
 
 #### Create Google Cloud project
 * http://console.developers.google.com
@@ -57,8 +60,7 @@ function myFunction() {
 * **Project name**: "clasp-dev-run-example"
   * NOTE: can't reuse the name of a deleted project per google's docs
 * Create new project (may take min)
-
-* Find the **Kabab Icon** "settings and utilities" (next to user avatar)
+* 🔥🔥🔥 Find the **Kabab Icon** "settings and utilities" (next to user avatar)
   * find "Project ID" & "Project Number"
 
 #### Add Project ID to local .clasp.json
