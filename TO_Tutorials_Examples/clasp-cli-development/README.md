@@ -102,12 +102,7 @@ function myFunction() {
 <!-- * Back to: https://console.developers.google.com -->
 * Select: **Credentials**
 * find **+ Create credentials** > **OAuth client ID**
-* **Applicaiton type**: "other" (!🚨 Important)
-  * Mistake I made: selected something else and it DIDN'T work.
-  <!--  -->
-  * 🔥🔥🔥 ... Looks like this has changed...
-  * SHIT THIS changed 12/2020. I tried *Desktop App*
- <!--  -->
+* **Applicaiton type**: *Desktop App* (!🚨 Important)
 * **Name**: I left default generated, like (..."Desktop client 1"... 🤷)
 * Click **{CREATE}** & **{OK}** and find the download icon, download...
 * RENAME!!! > `creds.json` and place in project folder
@@ -136,13 +131,13 @@ function myFunction() {
 }
 ```
 * $`clasp push`
-* Manifest file has been updated. Do you want to push and overwrite? {Y}
+* "Manifest file has been updated. Do you want to push and overwrite?" {Y}
 
 #### Test
 * $`clasp run` > select myFunction > "Ok it works here" 🎉
 
 
-* 🔥🔥🔥 ... Finally  Made  it here... 
+* 🔥🔥🔥 ... Finally  Made  it here...
 
 ----
 # Basic workflow example
@@ -155,7 +150,6 @@ You can code all you want in Google scripts the UI
 * And/Or: `clasp pull` if you make changes on the code in the UI
 
 #### Running code
-
 * Create a new file `testFunc.js` in your local project folder.
 * Then, add the following starter code...
 
