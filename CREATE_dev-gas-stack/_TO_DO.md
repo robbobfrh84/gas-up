@@ -1,9 +1,3 @@
-Turns out it was smart to do it first with review_2020. I did run into some differences problems.
-- After fixing a few small change (big blocker) I realized the "#### Add OAuth
-" section was the most undocumented and changed. I wondered why it's needed.
-- BUT, i "think" we need the authenticate MY computer. It'll be interesting when getting it running on the macbook.
-
-
 ### Next 3-ish ✅
 
 Finsish review_2020
@@ -11,25 +5,25 @@ Finsish review_2020
 - Clean review_2020
 
 Tidy-up **clasp-cli-development** folder.
+- clasp-dev-run-example needs notes on how to update, you need to hide authentications with gitignore, and write guide to developing. Probably worth starting from clasp clone ... then, document how to get throught to working with clasp run...
 - Clean README.md: Make sure it's easy to open this clasp tutoral and know how to open the example to see endgame.
-
-Move to Tutorials_Examples
-- Note: quick-api-example does not use CLI, but, both are GAS, So maybe create a `Google App Scripts` folder and put them both in there seperate. Add it to Google Cloud folder. But! maybe change that name to Google Development.
+- Move to Tutorials_Examples > `Google Development/Google App Scripts`
+- remove from gas-stack and github update.
 - Check that examples work when `cd`ed and clasp after move
 
 Create dev-gas-stack repo
 
+Update gas-stack repo
+
 ### To Do...
-- Desolve and move `gas-stack-create` to shed, change to "gas-stack-create_UI"
-  - Make sure the readme is desolved. You've got some notes you may want to move. AND! find `__dev/gas-stack` home for gsheets. Might as well keep alive. I enjoyed the UI.
 
-- Start building out/toward using kitchen sink.
-  - Still needs to be thought out what we're doing here...
-  - the new `gas-stack_v1.0` will need a Read All and Create Sheet.
-    - THEN, you can just plug in the new api, and your off!
-
+Start documenting track to build out new gas-stack_v1.0
+- Where do `gas-stack_v1.0` files go
+- Where / how to we document the origial build of new gas-stack
+- the gas-stack.js and gas-stack.gs are the core code, but how do we handle the *development google cloud* applicatoin aspect of it...
 
 ### Admin To Do...
+
 - ✅Rebrand repo: decide on name(s) and update repo wide.
   - I say stick with gas-stack its more memorable. NOTE: gas-db_v1.0 (change?)
   - Then, you could make gas-stack_v1.0, rather than 2.0?
@@ -41,7 +35,7 @@ Create dev-gas-stack repo
 Rebuild gas-stack from scratch
 - Setup a development workflow that's well documented for you in future.
 - Document each API function of the "Dev"-side well with Notes
-- Complete test_kitchen_sink, and another testers up to gas-db_v1.0 standard.
+- Complete a crud_sheets, and another testers up to gas-db_v1.0 standard.
   - ! With delete Sheet added
 
 Native Auth & Admin control (See `auth diagram.jpg`)

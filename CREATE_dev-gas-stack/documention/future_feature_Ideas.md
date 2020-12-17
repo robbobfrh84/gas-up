@@ -6,3 +6,4 @@
 ### Things that could be options to think about
 - Connecting Firebase in some way for realtime games and things...
 - Serving client from GAS script.
+- Have a calender sheet that does cron job stuff. This might need to be connect to a google app engine. which is fine!

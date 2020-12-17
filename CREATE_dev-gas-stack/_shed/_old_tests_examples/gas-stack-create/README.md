@@ -4,8 +4,8 @@
 - couldn't figure out where I was at... or headed.
 - I "THINK" this is a UI website thing, that would be really nice if we pushed forward with making this a ligit tool.
 - BUT, NOT a development site. Looks like I got distracted creating UI while trying to learn CLASP.....
-- NOTE: Everything below this point is just the old notes I made before
-  - This will eventually be moved to _shed, see WHERE_ITS_AT 
+- NOTE: Everything OUTDATED below this point is just the old notes I made before
+  - This will eventually be moved to _shed, see WHERE_ITS_AT
 
 -----
 # To Do

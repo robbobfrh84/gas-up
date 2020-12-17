@@ -323,6 +323,24 @@ NOTE: This acts just like github repo. So, it's easy to re-Clone to change direc
 * It's just controlled by the .clasp.json file.
 * So, if you `cd` out of once project in into another, you'll be controlling that project.
 
+#### Log in locally
+NOTE: This assumes you've already setup credentials for local development.
+* See: "Setting up and authentication" section above
+
+You'll be missing some credentials you still need
+* visit https://console.developers.google.com/
+* Make sure your app is selected > click **Credentails** on the left nav
+* Find the "OAuth 2.0 Client IDs" you set up and download the .json file.
+* change the .json file name to `creds.json` AND move into project folder.
+
+Add your Prjoect Id
+* find your project_id within that `creds.json` file and copy it.
+* $`clasp settings projectId <Your Project ID>` This adds it to your .clasp.json
+
+Now, you can finally log in locally
+* $`clasp login --creds creds.json` > looks for "Advanced" options to finish login.
+* Should only have to do this initially though.
+
 
 ----
 # Permanently Delete & Remove Project
