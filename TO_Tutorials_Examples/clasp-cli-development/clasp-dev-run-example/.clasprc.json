@@ -1,1 +1,15 @@
-{"token":{"access_token":"ya29.GlsoB__4QbfNB1lZhH2TMZY5p2Sn6e6FqrGQl2KQBIsQfqOc5aX3qTTAvEuhlUHkPmCz9MGxRv9J_YooXcotCjoK81mH5M43j2aR2EMQ2tw_2En9qLPIznsTgIg-","refresh_token":"1/LH6Q_pJmOmAVPjExAx2zkn5NdQRZUjLSbka60KzxpkaY8_sA4J1SurkpU4PnMAbQ","scope":"https://www.googleapis.com/auth/script.webapp.deploy https://www.googleapis.com/auth/drive","token_type":"Bearer","expiry_date":1560538072216},"oauth2ClientSettings":{"clientId":"59032310656-kk9leg2mso1jo0b98of4huev9cu58dpu.apps.googleusercontent.com","clientSecret":"pfy3j6TciUWe-ps9frs1P9PD","redirectUri":"urn:ietf:wg:oauth:2.0:oob"},"isLocalCreds":true}
+{
+  "token": {
+    "access_token": "ya29.GlsoB__4QbfNB1lZhH2TMZY5p2Sn6e6FqrGQl2KQBIsQfqOc5aX3qTTAvEuhlUHkPmCz9MGxRv9J_YooXcotCjoK81mH5M43j2aR2EMQ2tw_2En9qLPIznsTgIg-",
+    "refresh_token": "1/LH6Q_pJmOmAVPjExAx2zkn5NdQRZUjLSbka60KzxpkaY8_sA4J1SurkpU4PnMAbQ",
+    "scope": "https://www.googleapis.com/auth/script.webapp.deploy https://www.googleapis.com/auth/drive",
+    "token_type": "Bearer",
+    "expiry_date": 1560538072216
+  },
+  "oauth2ClientSettings": {
+    "clientId": "59032310656-kk9leg2mso1jo0b98of4huev9cu58dpu.apps.googleusercontent.com",
+    "clientSecret": "pfy3j6TciUWe-ps9frs1P9PD",
+    "redirectUri": "urn:ietf:wg:oauth:2.0:oob"
+  },
+  "isLocalCreds": true
+}
