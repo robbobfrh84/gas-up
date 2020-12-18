@@ -1,19 +1,19 @@
 ### Next 3-ish ✅
 
-Finsish review_2020
-- Delete all from clasp
-- Clean review_2020
+✅Finish review_2020
 
-Tidy-up **clasp-cli-development** folder.
-- clasp-dev-run-example needs notes on how to update, you need to hide authentications with gitignore, and write guide to developing. Probably worth starting from clasp clone ... then, document how to get throught to working with clasp run...
-- Clean README.md: Make sure it's easy to open this clasp tutoral and know how to open the example to see endgame.
-- Move to Tutorials_Examples > `Google Development/Google App Scripts`
-- remove from gas-stack and github update.
-- Check that examples work when `cd`ed and clasp after move
+Move to Tutorials_Examples > `Google Development/Google App Scripts`
 
 Create dev-gas-stack repo
 
 Update gas-stack repo
+
+Redo as `/completed_walkthrough-12-2020`
+- Add Readme with "Jumping back in" section
+- Remove `review_2020` All.
+- Remove `clasp-cli-completed_walkthrough` (Drive stuff should already be gone)
+
+
 
 ### To Do...
 

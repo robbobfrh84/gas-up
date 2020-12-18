@@ -1,4 +1,4 @@
-# Review Notes after returning a few years later.
+### I Reviewed README.md after returning a few years later.
 I just want to go through this guide again in Dec. 2020 and see if anything has changed, or I'd missed something. Really just to obsorb it again, because I'd forgotten a lot.
 - I did clarify and update a few things on clasp-dev-run-example. So, that's still the best place to walk-through setting up a GAS project
 - Source code: I just did all of this by creating a project folder on my Desktop. So, source code files for this example may not be recorded here, and may have been removed.

@@ -1,12 +1,12 @@
 # Development with Google Apps Script CLI "Clasp"
 
 NOTE:
-* For a "skinny" guide, see `quickstart.md` for quick server & api
-* New Comp, old project? See **Adding remote projects** section below
+* See: `/completed_walkthrough-12-2020` for a completed example.
+* For a "skinny" guide: `quickstart.md` for a quick server & url api example
 
 ### Summery
 * Install Clasp
-* Setting up and authentication
+* Setting up and local authentication
 * Basic workflow example
 * Adding Google Sheets
 * Logs
@@ -17,8 +17,6 @@ NOTE:
 * Permanently Delete & Remove Project
 * Basic `clasp` CLI operations
 * Resources
-
-SEE: `/clasp-dev-run-example` for example code created through this guide.
 
 
 ----
@@ -33,10 +31,10 @@ SEE: `/clasp-dev-run-example` for example code created through this guide.
 
 
 ----
-# Setting up and authentication
-* This will allow you to run the `clasp run` locally to  
+# Setting up and local authentication
+* This will allow you to run the `clasp run` locally to run GAS functions.  
 * The below directions are mostly a summery from: https://github.com/google/clasp
-* NOTE: Stick close to the order of events here. It's real easy to miss something when going through UI especially.. and then it'll not work...
+* NOTE: Stick close to the order of events here. It's _real_ easy to miss something when going through UI especially... and then it'll not work.
 
 #### Create Project folder
 * $`mkdir clasp-dev-run-example ; cd clasp-dev-run-example`
@@ -47,17 +45,17 @@ SEE: `/clasp-dev-run-example` for example code created through this guide.
 #### Add code locally and push for testing in browser
 * $`clasp pull` > Will pull down the `code.js` form link
 * add 👇 to "Code.js" file after pull.
-```javascript
-function myFunction() {
-  Logger.log("A log for you")
-  return "Ok it works here"
-}
-```
+  ```javascript
+  function myFunction() {
+    Logger.log("A log for you")
+    return "Ok it works here"
+  }
+  ```
 * $`clasp push`
-  * Open GAS in browser tab, OR just run $`clasp open` in cli
-  * ▶️ will run the selected "myFunction"
-  * Then, *view* > *logs* (or ⌘+enter)
-  * NOTE: to run function locally, you'll need to log in. But you'll have to first create a google cloud project for that.
+* Open GAS in browser tab, OR just run $`clasp open` in cli
+* ▶️ will run the selected "myFunction"
+* Then, *view* > *logs* (or ⌘+enter)
+* NOTE: to run function locally, you'll need to log in. But you'll have to first create a google cloud project for that.
 
 #### Create Google Cloud project
 * http://console.developers.google.com
@@ -98,8 +96,7 @@ function myFunction() {
 * Paste `Project number` in **Change Project** Section and click **{Set Project}** & **{Confirm}**
 
 #### Set OAuth 2 client
-* $`clasp open --creds`
-<!-- * Back to: https://console.developers.google.com -->
+* $`clasp open --creds` <!-- https://console.developers.google.com -->
 * Select: **Credentials**
 * find **+ Create credentials** > **OAuth client ID**
 * **Applicaiton type**: *Desktop App* (!🚨 Important)
@@ -112,32 +109,18 @@ function myFunction() {
 * NOTE: click **advanced** to allow login.
   * small options, kinda hiddent `go to <your project> (unsafe)`
 * **{Allow}**
-* Add these Config lines to `appsscript.json`
-```
-  "executionApi": {
-    "access": "ANYONE"
-  }
-```
-* So, it should look something like this with ... 👇(subject to change.)
-```json
-{
-  "timeZone": "America/New_York",
-  "dependencies": {
-  },
-  "exceptionLogging": "STACKDRIVER",
-  "executionApi": {
-    "access": "ANYONE"
-  }
-}
-```
+* Add these Config lines to `appsscript.json` at end
+  ```json
+    "executionApi": {
+      "access": "ANYONE"
+    }
+  ```
 * $`clasp push`
 * "Manifest file has been updated. Do you want to push and overwrite?" {Y}
 
 #### Test
 * $`clasp run` > select myFunction > "Ok it works here" 🎉
 
-
-* 🔥🔥🔥 ... Finally  Made  it here...
 
 ----
 # Basic workflow example
@@ -152,29 +135,29 @@ You can code all you want in Google scripts the UI
 #### Running code
 * Create a new file `testFunc.js` in your local project folder.
 * Then, add the following starter code...
-
-```javascript
-function gasTest(){
-  Logger.log("HI-eeeEE!") // use console.log for logs in terminal *see below
-  return "Hello from GAS!"
-}
-```
+  ```javascript
+  function gasTest(){
+    Logger.log("HI-eeeEE!") // use console.log for logs in terminal *see below
+    return "Hello from GAS!"
+  }
+  ```
 * $`clasp push` > updates your changes to the cloud
 * $`clasp run` > select the gasTest > see: `Hello from Gas!`
 * $`clasp open` > see your updated code on UI.
-* in the UI > `view` > `logs` > should see: `HI-eeeEE`
+* in the UI > `view` > `logs` > `Apps Script Dashboard` at bottom > **{ok}**
+  * Click on the most recent log at the top, should see: `HI-eeeEE`
+* NOTE: if you press the **{>}** play button in the GAS UI, you'll see the logs "logged" right in the window before the dashboard. But, `clasp run` logs don't show up there.
 
 #### Running code with Arguments
 
 You must make your code into JSON format as one raw/string/object argument.
 * update the code to set a parameter.
-
-```javascript
-function gasTest(param){
-  console.log("from logs: ", param) // user Logger.log for UI logs *see above
-  return "Your argument was... 👉 " + param
-}
-```
+  ```javascript
+  function gasTest(param){
+    console.log("from logs: ", param) // user Logger.log for UI logs *see above
+    return "Your argument was... 👉 " + param
+  }
+  ```
 * Update code ... $`clasp push`
 * String: $`clasp run gasTest -p '"hello"'` > hello!
 * Number: $`clasp run gasTest -p '32'` > 32
@@ -185,49 +168,66 @@ function gasTest(param){
 * Multi: $`clasp run gasTest -p '["A string", "32"]'`
   * `function gasTest(p1,p2) {return p1+' '+p2}` > A String 32
 
+
 ----
 # Adding Google Sheets
 
 #### Add `createSheet.js` code
 * $`touch createSheets.js`
-
-```javascript
-function createSpreadSheet() {
-  var sheet = Sheets.newSpreadsheet();
-  sheet.properties = Sheets.newSpreadsheetProperties();
-  sheet.properties.title = "OK lets go";
-  var spreadsheet = Sheets.Spreadsheets.create(sheet);
-}
-```
+  ```javascript
+  function createSpreadSheet(param) {
+    var sheet = Sheets.newSpreadsheet();
+    sheet.properties = Sheets.newSpreadsheetProperties();
+    sheet.properties.title = "OK lets go";
+    var spreadsheet = Sheets.Spreadsheets.create(sheet);
+  }
+  ```
 * $`clasp push`
 * $`clasp open`
 * **Resources** > **Advanced Google services**
 * find **Google Sheets API** > Toggled **ON**
+* There's a notification tell you that you much also enable the service in the **Google Cloud Platform API Dashboard** > So click that link...
+* Find & click **+ Enable APIs and Serves**
+* If you just search "sheets", it'll filter to **Google Sheets API**
+* Select and **{Enable}**
 
-* $`clasp run createSpreadSheet -p '"my new sheet"'`
+<!-- * $`clasp run createSpreadSheet -p '"my new sheet"'`
   * You'll get an alert that you need to add scopes from script url.
   * Copy paste scopes form script
-* $`clasp pull`
-* Update manifest > $`clasp login --creds creds.js`
-* Again: $`clasp run createSpreadsheet -p '"my new sheet"'`
-* Go to http://sheets.google.com
-  * See new sheet here.
+* $`clasp pull` -->
+🙃
+🙃
+🙃
 
-For Read and Write code to sheet, see `clasp-dev-run-example/createSheet.js`
+
+* $`clasp pull`
+* Now, add oauth scope to `appsscript.json` at the end.
+  ```JSON
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/spreadsheets"
+  ]
+  ```
+* $`clasp push` > **{y}**
+* you now need to update your credentials > $`clasp login --creds creds.json`
+
+Now try: $`clasp run createSpreadsheet -p '"my new sheet"'`
+* Go to http://sheets.google.com > find your sheet!
+
+For Read and Write code to sheet, see `sheets.js` in`/completed_walkthrough...`
   * Add something to A1 to test... > "HEEEELLLOOO"
   * `clasp run read` > HEEEELLLOOO
-  * `clasp run write -p '"World"'` >
+  * `clasp run write -p '"World"'`
+
 
 ----
 # Logs
-
-👀 🔥 👀 live logs! VERY useful for development...
+Live logs! 👀 🔥 👀 VERY useful for development!
 * open new terminal tab for...
   * $`clasp logs ---watch` > refreshes every 1-2 sec.
 
 Static logging
 * $`clasp logs` or
-* 🔥 `clasp logs --json`
+* 🔥 $`clasp logs --json` / $`clasp logs --json --watch`
   * Gives you a ton more info about the request.
 
 ----
@@ -240,7 +240,7 @@ Create a new Deployment (Make sure you've $`clasp push`)
 * $`clasp deploy` > example: Created version 1.
   * More info: https://github.com/google/clasp
 
-Redeploy
+Redeploy (you probably don't want a bazillion version, so use redeploy)
 * $`clasp version 1 redeploy` > do it this way usually through development.
   * ... unless you have diff versions. you wanna keep.
 
@@ -252,7 +252,7 @@ After you `clasp push` your changes...
 * $`clasp deploy`
   * Note: this will create a new version. COPY that id.
 
-* Likely, you'll really be pushing and deploying at the same time, same version.
+Sometime, you'll really be pushing and deploying at the same time, same version.
 * $`clasp push`, then
 * $`clasp deploy -i <the version id>` or whatever version you want to deploy from. Note, you might need to check the browser ui to get the most current version
   * Example: `clasp deploy -i /s/AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`
@@ -260,14 +260,28 @@ After you `clasp push` your changes...
 #### ALL IN ONE!
 - $`clasp push; clasp deploy -i AKfycbyGSuUQMuuaPAYAF-mgbg52A-ZLUv6h-jZ_Bk_kO0hf0PylmdPvWwytGpas4v9hq0_y`
 
-#### Browser link !Important
-* you'll wanna make sure you're using the correct deployment link to see changes on your browser code. So...
-  * In the example above the deploy id I used was from version 3.
-  * Go to the console and select Publish: 'deploy from manifest'
-  * version three is the link you'll now want in your client side code.
 
 ----
 # Make public API web app
+
+#### Deploy as web app
+* $`clasp open`
+* **Publish** > **Deploy as web app**
+  * Who has access to the app: Everyone, even anonymous.
+  * **{deploy}** > **{Ok}**
+* Now, you can just do...
+* `clasp version 1 redeploy` to update deployment
+  * When I did this, it said it created a higher(incrementing) version.
+  * But, it did not when I checked deployments. So... whatever.
+* OR: `clasp deploy` for a new version.
+
+#### Get the Browser link !Important
+* $`clasp open`
+* Select the **Publish** tab > **deploy from manifest**
+* Open the **Latest Version (Head)**
+* Copy the link with the globe icon.
+* Should look something like: https://script.google.com/macros/s/AKfycbzX6PG8Iw05uHoDrW1AD7I9gRKpznYYxr0dQIgQUWKi/exec
+  * Note, this link won't do anything yet.
 
 #### Create new file and add a GET request
 * $`touch get.js` and add this code...
@@ -287,20 +301,11 @@ function testGet(){
 * $`clasp push`
 * $`clasp run testGet` > response as object with circumference of circle!
 
-#### Deploy as web app
-* $`clasp open`
-* **Publish** > **Deploy as web app**
-  * Who has access to the app: Everyone, even anonymous.
-  * **{deploy}** > **{Ok}**
-* Now, you can just do...
-* `clasp version 1 redeploy` to update deployment
-* OR: `clasp deplay` for a new version.
-
-#### Create URL and endpoint to test
-* $`clasp deployments` > copy ID that's followed by `@HEAD` > Paste 👇
-
-Url: https://script.google.com/macros/s/PASTE_YOUR_ID_HERE/exec?r=23
+#### Run with your URL!
+* Update the deployment: `clasp deploy` OR `clasp version 1 redeploy`
+* Using the URL you got from above, just add `/r=23` to the end.
 * example: https://script.google.com/macros/s/AKfycbxvODgI6BmxYjdDKWEj-mrbaXHWUD_AklE7SoqGjr2S/exec?r=23
+* should see your api response in the browser!
 
 
 ----
@@ -315,7 +320,7 @@ Clone the project
   - Also, within the GAS in the browser: **File** > **Project Properties**
 - $`mkdir <name of project>` & `cd` > You have to create the folder name
 - $`clasp clone <Script ID>`
-- Now, you should be able to makes changes and $ `clasp push`
+- Now, you should be able to makes changes and $`clasp push`
 
 NOTE: This acts just like github repo. So, it's easy to re-Clone to change directory around your local machine.
 
@@ -343,10 +348,11 @@ Now, you can finally log in locally
 
 
 ----
-# Permanently Delete & Remove Project
+# Permanently Delete & Remove Project (Sheets too!)
 * visit: http://script.google.com
-  * Select the menu icon > {Remove}
-  * Then visit "Trash" and permanently remove.
+  * Select the menu icon > {Remove} (visit "Trash" to permanently remove)
+* visit: http://script.google.com
+  * Select the menu icon > {Remove} (visit "Trash" to permanently remove)
 * visit: http://console.developers.google.com
   * Select the project you want to delete.
   * Next to your google avatar, select the menu icon ...
