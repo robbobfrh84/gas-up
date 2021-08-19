@@ -1,3 +1,8 @@
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/jonsn0w/hyde.svg?style=social)](https://twitter.com/BobMain49)
+[![Analytics](https://ga-beacon.appspot.com/UA-38514290-17/github.com/Naereen/badges/README.md?pixel)](https://GitHub.com/Naereen/badges/)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/robbobfrh84/coronavirus-visualizations)
+
+
 # gas-stack (Google App Scripts with Google Sheets for data storage)
 If you're a front-end developer looking to prototype with logins, databases and APIs: consider some GAS. This is a light weight (and uh, free) way to create **live** full-stack web application.
 
