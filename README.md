@@ -1,121 +1,47 @@
-[![Tweet](https://img.shields.io/twitter/url/https/github.com/jonsn0w/hyde.svg?style=social)](https://twitter.com/BobMain49)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/sponsors/robbobfrh84)
+# GAS Up
+#### Build dynamic client-side **apps** with google sheets.
+- Build, read and update sheets with client-side API request.
+- Your google sheet is styled like a Database.
+- Customize your "back-end" with an open-source Google Apps Script(GAS) library.
 
-[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+### How?
+Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts." To see a simple example of this open a new [Google Sheet](sheet.google.com).
+- Select "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
+- Here, you can also add Libraries that have already been created to do special things!
 
-
-
-# gas-stack (Google App Scripts with Google Sheets for data storage)
-If you're a front-end developer looking to prototype with logins, databases and APIs: consider some GAS. This is a light weight (and uh, free) way to create **live** full-stack web application.
-
-NOTE TO BOB:
-- WARNING! Don't change at this repo at all. it's done, and recorded in original-gas-db folder in dev-gas-stack/versions.
-- You're working on gas-stack_v1.0!
-- You updated this to sit in the purist gas-db_v1.0 state, & it's mirrored 👆.
-  - And, probably don't include this note in gas-stack_v2.0
-
+#### **GAS Up** is one of those libraries!
+And, you don't need to add any Google Apps Script code of your own to get started. GAS Up creates an API that allows client-side apps to directly access, and update, data from any Google Sheet you own and allow access to.  
 
 ----
-# Documentation (Version gas-db_1.0)
+(*NOTE TO SELF: Bury technical terminology.)
 
-### Guide to getting started with a gas-stack project
+# GAS Up
+A pro-typing and microsite Library driven by Google Apps Scripts and managed by Google Sheets.
+- ...aka, **GAS Up**
 
-Create a google sheet to be your database
-- Visit `sheets.google.com` (you may need to login first)
-- Under *Start a new spreadsheet* select [blank]
-- rename "Untitled spreadsheet" to whatever you want
-  - We'll use `gas-db-example` for this guide.
+Get started by simply making your own copy of the following [Google Sheet](https://docs.google.com/spreadsheets/d/1VeKKVaArEb3CJbHszPneumDRZaJUq4rvVxIlI3VQJWI/edit#gid=2139962666) and following the directions on the sheet.
 
-Add Database API code to Sheet.
-* In your new sheet, select: *Tools* > *Script Editor*
-* Copy / Paste entire contents of `gas-db_v1.0.gs`(found in this folder)
-* *Save* Your Script
-  * Note: development example sheet and code found [here](https://docs.google.com/spreadsheets/d/1obGKnWSuQsXNyBUP2h5UOjszPiPgkYk7aVZdRSScnEI/edit#gid=0)
+### Build your Front-end with the GAS Up API
+With simple `fetch` requests, you can retrieve and manipulate your sheets data simple by modifying the url query string.
 
-Publish your API
-* In the Script Editor, select: *Publish* > *Deploy as web app*
-* Find and select: *"Who has access to the app"* to *"Everyone, even anonymous"*.
-  * NOTE: This is just for the software so it can be accessed programmatically. NOT access to view the google spreadsheet itself. That's still private.
-* Select: *Review Permissions*
-* Log into your gmail account
-* Now, Select *advanced* to authorize > *continue to unsafe*
-* The url is not the global url you want. For that, you need to make your API global.
+### And, GAS is really just javascript
+Google Apps Script is really just javascript that can do things with google docs.  
 
-Make API global
-* In the Script Editor, select: *Publish* > *Deploy from minifest* >
-* Then, select: *'web app meta-version'* >
-* !copy link next to GLOBE
+_NOTE: Jump to the [Script Editor](#the-script-editor) section for more info on source, and custom Google Apps Script code._
 
-Congratulations! this is your API's URL! Save it to add to your front-end code!
+##### sheet & row metadata
+Both the **A1** cell of a sheet, and each rowId cell have a note with `json` code. This is important and should **not** be removed or modified without knowing the full consequences. The sheet `json` comes default with keys `sheet_metaData` and `state`
+- The `sheet_metadata` key is for gas-up that tells the code what type of sheet it's dealing with. For example, when modifying a sheet or row, they code will check that the sheet is a `type: table` in the `sheet_metaData` before allowing table type changes to the sheet.
+- The `state` key is for app specific / manual changes. here you have a place to add different variables that may inform you app about specifics of the sheet or row.
 
+The **row** `json` note contains info specific info about the row and should also not be messed with. But, just like with sheets, the `state` can be modified for app specific needs.
 
-### What if you already have a google sheet you'd like to add as your db?
+### Grid Sheets
+Grid sheets are much more free and open. More like how a user with interact with a spreadsheet. So, easy to update and read. But, also easy to mess up your data on these types of sheets.  
 
-Open your Google Sheet...
-* With your sheet open > file > download as > Microsoft Excel (.xlsx)
-* Save file somewhere in your google drive.
+## The Script Editor
+#### Adding custom Google Apps Script code
+wip ...
 
-In your new Google Sheet
-* File > Import > find your .xlsx
-* select > Replace your spreadsheet
-
----
-# API CRUD REQUESTS: Add to browser-side code
-
-### Basic Example
-```javascript
-_gas.crud(
-  "READ" , // action
-  "sheet", // scope
-  { // fields
-    sheetName: 'some name of sheet in your spreadsheet',
-  }
-}).then( payload => {
-  if (!payload.error) {
-    console.log(payload.data)
-  }
-})
-```
-
-### CREATE
-| scope        | required fields           | option fields  |
-| ------------- | ------------- | ----- |
-| sheet      | sheetname (string)	 | - |
-| addkeys      | sheetname (string), keys (Array)	 | - |
-| row      | sheetname (string)	      |   content (object), _Id (default: true) |
-| cell | *use 'UPDATE cell'      | - |
-
-### READ
-| scope        | required fields           | option fields  |
-| ------------- | ------------- | ----- |
-| all      | - | - |
-| sheet    | sheetname (string)	| - |
-| row      | sheetname (string), _Id(string) | - |
-| cell | sheetname, cell | - |
-
-### UPDATE
-| scope        | required fields           | option fields  |
-| ------------- | ------------- | ----- |
-| row      | sheetname, _Id	 | content (object) |
-| cell | sheetname (string), cell (string) | content (object) , increment (number), date (String) |
-
-### DELETE
-| scope        | required fields           | option fields  |
-| ------------- | ------------- | ----- |
-| row      | sheetname (string), _Id(string) | - |
-| cell | *use 'UPDATE cell', set field.content = "" | - |
-
-# In Google Sheets Cell triggers
-
-`_Id` in **first** row AND _empty_ column.
-- This will generate all Ids for subsequent rows of data.
-- Also, any new row data will generate a new id and name range.
-  - NOTE: this may take a 1 sec or two and typing before it set in could cause issues.
-
-`_Del` in column of ids in a row with width range names.  
-- Will remove the name range and id.
-  - NOTE: this may take a 1 sec or two, and typing before it sets in could cause issues.
-
-`_Date`
-- places a human timestamp.
+### The source code
+wip ...
