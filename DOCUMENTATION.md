@@ -63,7 +63,7 @@ To work, you'd have to replace the following with **your** specific ids into the
 
 
 # read sheets
-
+...
 
 # Saving raw SDK Examples to document...
 ```javascript
