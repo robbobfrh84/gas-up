@@ -63,3 +63,55 @@ To work, you'd have to replace the following with **your** specific ids into the
 
 
 # read sheets
+
+
+# Saving raw SDK Examples to document...
+```javascript
+
+gasup.read.gsheet()
+  .then( resp => console.log("gsheet: ", resp.data.sheets))
+
+gasup.read.sheet({
+  sheetId: "*"
+}).then(
+  resp => console.log('resp: ', resp)
+)
+
+gasup.read.sheet({ // ❌ error
+  sheetId: "*e"
+}).then(
+  resp => console.log('resp: ', resp),
+  error => console.error(error) // ❌ error handler
+)
+
+gasup.read.sheet({
+  sheetId: "2039567170"
+}).then(
+  resp => {
+    console.log(" - keys :", resp.data.keys)
+    console.log(' - rows: ', resp.data.rows)
+  }
+)
+
+gasup.read.row({
+  sheetId: "2039567170",
+  rowId: "r_caGQj5b2_kstgevot"
+}).then(
+  resp => {
+    console.log(" ~~ row :", resp.data.row)
+  }
+)
+
+gasup.create.row({
+  sheetId: "2039567170",
+  rowId: "r_caGQj5b2_kstgevot",
+  row: {
+    name: "new promise SDK",
+    age: "37"
+  }
+}).then(
+  resp => {
+    console.log(" ~_~ row :", resp.data.row)
+  }
+)
+```
