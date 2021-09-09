@@ -5,7 +5,7 @@
 - Customize your "back-end" with an open-source Google Apps Script(GAS) library.
 
 ### How?
-Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts." To see a simple example of this open a new [Google Sheet](sheet.google.com).
+Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
 - Select "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
 - Here, you can also add Libraries that have already been created to do special things!
 
