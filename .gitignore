@@ -3,5 +3,6 @@
 # clasp
 *.clasp.json
 *.clasprc.json
-*appsscript.json
 *.claspignore
+*appsscript.json
+*creds.json
