@@ -1,10 +1,10 @@
 function onOpen() {
   const ui = SpreadsheetApp.getUi()
   ui.createMenu('GAS Up')
-    .addItem('Create *Root sheet', 'Gasup.createRootSheet')
+    .addItem('Create *Root sheet', 'gasup.createRootSheet')
     .addSeparator()
-    .addItem('Create Table', 'Gasup.createTable')
-    .addItem('Create Grid', 'Gasup.createGrid')
+    .addItem('Create Table', 'gasup.createTable')
+    .addItem('Create Grid', 'gasup.createGrid')
     // .addSubMenu(ui.createMenu('[WIP]Extentions')
     //   .addItem('[WIP]Client API Explorer', 'clientAPIExplorer')
     //   .addItem('[WIP]Permissions', 'permissions'))

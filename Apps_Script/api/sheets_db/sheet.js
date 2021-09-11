@@ -130,7 +130,7 @@ api_sheets_db.update_sheet = function({ id, sheetId, // REQUIRED
   if (sheetObj.error) return sheetObj
 
   return { id, sheetId, ...sheetObj,
-    message: "Successfully updated sheet's "+type,
+    message: "Successfully updated sheet"
   }
 
 }

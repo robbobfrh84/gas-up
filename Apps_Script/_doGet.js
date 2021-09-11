@@ -50,7 +50,6 @@ function rootResponseAsJSON(e) {
   const obj = {
     name: "GAS Up",
     gas_up_github: "https://github.com/robbobfrh84/gas-up",
-    development_github: "https://github.com/robbobfrh84/dev-gas-up",
   }
 
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON)

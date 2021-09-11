@@ -1,5 +1,5 @@
-// See clasp.sh file for test lab.
-function claspDoGet(queryString){
+// See clasp.sh file for tests.
+function _testOnly_claspDoGet(queryString){
   const query = {
     queryString: queryString || "",
     parameter: {}
