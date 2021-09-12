@@ -13,13 +13,15 @@ Google Sheets allow for javascript to control and automate Google Sheets with wh
 And, you don't need to add any Google Apps Script code of your own to get started. GAS Up creates an API that allows client-side apps to directly access, and update, data from any Google Sheet you own and allow access to.  
 
 ----
+----
+----
 (*NOTE TO SELF: Bury technical terminology.)
 
 # GAS Up
 A pro-typing and microsite Library driven by Google Apps Scripts and managed by Google Sheets.
 - ...aka, **GAS Up**
 
-Get started by simply making your own copy of the following [Google Sheet](https://docs.google.com/spreadsheets/d/1VeKKVaArEb3CJbHszPneumDRZaJUq4rvVxIlI3VQJWI/edit#gid=2139962666) and following the directions on the sheet.
+Get started by simply making your own copy of the [GAS Up Starter](https://docs.google.com/spreadsheets/d/1uY1mA1tUGRR8kxuc9QdSL1u1ScNvhUvsidAd2yIEFz0/edit#gid=310584182) Google Sheet and following the directions on the sheet.
 
 ### Build your Front-end with the GAS Up API
 With simple `fetch` requests, you can retrieve and manipulate your sheets data simple by modifying the url query string.
