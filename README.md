@@ -1,5 +1,5 @@
 # GAS Up
-#### Build dynamic client-side **apps** with google sheets.
+#### Dynamic client-side **apps** with google sheets.
 - Build, read and update sheets with client-side API request.
 - Your google sheet is styled like a Database.
 - Customize your "back-end" with an open-source Google Apps Script(GAS) library.

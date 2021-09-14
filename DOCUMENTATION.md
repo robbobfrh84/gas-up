@@ -1,8 +1,8 @@
 # GAS Up: CRUD API Documentation
 
-**Requires**: GAS Up Javascript SDK. See: [setting up SDK](bla.js)
+**Requires**: GAS Up Javascript SDK. See: [setting up SDK](TO_DO.md)
 
-### Example Request (Client-side Javascript)
+### Example Request (client-side Javascript)
 ```javascript
 gasup.read.sheet({
   sheetId: "2039567170"
