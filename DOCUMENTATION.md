@@ -69,7 +69,9 @@ gasup.read.gsheet()
 ```javascript
 gasup.create.sheet({
   sheetName: "A Cool Sheet"
-}).then( resp => console.log("sheet: ", resp.data.sheets))
+}).then( resp => {
+  console.log("sheet: ", resp.data.sheets)
+})
 ```
 
 ### read sheet
