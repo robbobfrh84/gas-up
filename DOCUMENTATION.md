@@ -1,24 +1,21 @@
 # GAS Up: CRUD API Documentation
+The complete GAS Up client-side javascript documentation for manipulating Google Sheets with create, read, update and delete requests for a sheet, rows and cells.
+- The API is structured so that the Google Sheets behave like a Simple database.
 
-**Requires**: GAS Up Javascript SDK. See: [setting up SDK](TO_DO.md)
+**Requires**: [Gasup.js](https://github.com/robbobfrh84/gas-up/blob/master/client/Gasup.js) library file to be included in `<head>` of your .html file.
 
-### Example Request (client-side Javascript)
+### Example Request
 ```javascript
 gasup.read.sheet({
   sheetId: "2039567170"
 }).then(
-  resp => console.log('resp: ', resp)
+  resp => console.log('respsone: ', response)
 )
 ```
-This javascript client-side SDK request would generate a GET url request that would look something like the following.
-- `https://script.google.com/macros/s/<projectId>/exec?request=read&scope=sheet&id=<id>&sheetId=<sheetId>`
+- This `response` will return a javascript object with an array of rows with individual ids.
 
-To work, you'd have to replace the following with **your** specific ids into the url example above.
-- `<projectId>`: your deployed Google Apps Script project Id
-- `<id>`: The id of the Google Sheet (can be found in sheet's url)
-- `<sheetId>`: The sheet id (tab) of the Google Sheet (can also be found in sheet's url)
 
-### Requests Summery
+## Requests Summery
 | scope     | CRUD operations available             |
 | --------- | ------------------------------------- |
 | sheets    | 🔵 Read |
@@ -28,26 +25,26 @@ To work, you'd have to replace the following with **your** specific ids into the
 | cells     | 🔵 Read 🟡 Update |
 
 
-### sheets
+## sheets
 | request   | required          | options      | example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🔵 read | id | - | [link](#read-sheets) |
+| 🔵 read | id | - | [read sheets](#read-sheets) |
 
-### sheet
-| request   | required          | options      |
-| --------- | ----------------- | ------------ |
-| 🟢 create    | id, sheetName     | type |
+## sheet
+| request   | required          | options      | Example      |
+| --------- | ----------------- | ------------ | ------------ |
+| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet) |
 | 🔵 read      | id, sheetId       | - |
 | 🟡 update     | | |
 | 🔴 delete     | | |
 
-### keys
+## keys
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
 | 🟢 create    | id, sheetName     | type |
 | 🔵 read      | id, sheetId       | - |
 
-### row
+## row
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
 | 🟢 create    | ...     |  |
@@ -55,15 +52,54 @@ To work, you'd have to replace the following with **your** specific ids into the
 | 🟡 update     | | |
 | 🔴 delete     | | |
 
-### cells
+## cells
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
 | 🔵 read      | ...       | - |
 | 🟡 update     | | |
 
 
-# read sheets
-...
+### read sheets
+```javascript
+gasup.read.gsheet()
+  .then( resp => console.log("gsheet: ", resp.data.sheets))
+```
+
+### create sheet
+```javascript
+gasup.create.sheet({
+  sheetName: "A Cool Sheet"
+}).then( resp => console.log("sheet: ", resp.data.sheets))
+```
+
+### read sheet
+### update sheet
+### delete sheet
+
+### create keys
+### read keys
+
+### create rows
+### read row
+### update row
+### delete row
+
+### update cells
+### read cells
+
+----
+# Anatomy of a GAS Up API url request.
+
+This javascript client-side SDK request generates a GET url request that would look something like the following.
+- `https://script.google.com/macros/s/<projectId>/exec?request=read&scope=sheet&id=<id>&sheetId=<sheetId>`
+
+To work, you'd have to replace the following with **your** specific ids into the url example above.
+- `<projectId>`: your deployed Google Apps Script project Id
+- `<id>`: The id of the Google Sheet (can be found in sheet's url)
+- `<sheetId>`: The sheet id (tab) of the Google Sheet (can also be found in sheet's url)
+
+
+----
 
 # Saving raw SDK Examples to document...
 ```javascript
