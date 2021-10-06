@@ -8,27 +8,25 @@ The complete GAS Up client-side javascript documentation for manipulating Google
 ```javascript
 gasup.read.sheet({
   sheetId: "2039567170"
-}).then(
-  resp => console.log('respsone: ', response)
-)
+}).then( resp => console.log(resp) )
 ```
-- This `response` will return a javascript object with an array of rows with individual ids.
+- This `resp` will return a javascript object with an array of rows with individual ids.
 
 
 ## Requests Summery
 | scope     | CRUD operations available             |
 | --------- | ------------------------------------- |
-| sheets    | 🔵 Read |
-| sheet     | 🟢 Create 🔵 Read 🟡 Update 🔴 Delete   |
-| keys      | 🟢 Create 🔵 Read |
-| row       | 🟢 Create 🔵 Read 🟡 Update 🔴 Delete   |
-| cells     | 🔵 Read 🟡 Update |
+| gsheet    | 🔵 read |
+| sheet     | 🟢 create 🔵 read 🟡 update 🔴 delete   |
+| keys      | 🟢 create 🔵 read |
+| row       | 🟢 create 🔵 read 🟡 update 🔴 delete   |
+| cells     | 🔵 read 🟡 update |
 
 
-## sheets
+## gsheet
 | request   | required          | options      | example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🔵 read | id | - | [read sheets](#read-sheets) |
+| 🔵 read | id | - | [read gsheet](#read-gsheet) |
 
 ## sheet
 | request   | required          | options      | Example      |
@@ -61,22 +59,25 @@ gasup.read.sheet({
 
 # Examples
 
-### read sheets
+### read gsheet
 ```javascript
 gasup.read.gsheet()
-  .then( resp => console.log("gsheet: ", resp.data.sheets))
+  .then( resp => console.log("gsheet: ", resp.data.sheets) )
 ```
 
 ### create sheet
 ```javascript
 gasup.create.sheet({
   sheetName: "A Cool Sheet"
-}).then( resp => {
-  console.log("sheet: ", resp.data.sheets)
-})
+}).then( resp => console.log(resp.data) )
 ```
 
 ### read sheet
+```javascript
+gasup.read.sheet({
+  sheetId: 350278289
+}).then( resp => console.log(resp.data) )
+```
 ### update sheet
 ### delete sheet
 
