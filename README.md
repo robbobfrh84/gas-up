@@ -1,14 +1,14 @@
 # GAS Up
 ### Dynamic client-side **apps** with google sheets
-- Build, read and update sheets with client-side API requests.
-- The connected google sheet is laid-out like a Database.
+- Build, read, update and delete sheets with client-side API requests.
+- The connected google sheet is laid out like a Database.
 - Customize your cloud "back-end" with an open-source Google Apps Script(GAS) library.
 - Great for prototyping web apps, hosting static data, microsites, internal apps, Iot apps and logging, and for whatever else some wacky person might dream up!
 
 ### How?
 Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
 - Select "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
-- Here, you can also add Libraries that have already been created to do special things!
+- Here, you can also add __Libraries__ that have already been created to do special things!
 
 ### **GAS Up** is one of those libraries!
 And, you don't need to add any Google Apps Script code of your own to get started. GAS Up creates an API that allows client-side apps to directly access, and update, data from any Google Sheet you own and allow access to.  
