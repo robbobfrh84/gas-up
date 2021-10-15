@@ -106,7 +106,7 @@ gasup.read.sheet({
 
 ----
 
-# create keys 🟢
+# create keys 🟢🔑
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 - <u>Required</u>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
 - <u>Options</u>: _no options_
