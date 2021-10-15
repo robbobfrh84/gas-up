@@ -71,6 +71,10 @@ gasup.read.sheet({
 
 # Examples
 
+### read gsheet
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
+🟢 🗓
+
 ### create sheet
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🔖
