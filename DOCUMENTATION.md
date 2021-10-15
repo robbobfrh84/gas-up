@@ -28,17 +28,19 @@ gasup.read.sheet({
 ## Requests Summery
 | scope     | CRUD operations available             |
 | --------- | ------------------------------------- |
-| gsheet 🗓 | 🔵 read |
-| sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | [🟢 create](#create-keys--) [🔵 read](#read-keys) |
-| row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| cells  🦠 | 🔵 read 🟡 update |
-
+| gsheet 🗓 | [🔵 read](#read-gsheet--) |
+| sheet  🔖 | [🟢 create](#create-sheet--) [🔵 read](#read-sheet--) [🟡 update](#update-sheet--) [🔴 delete](#delete-sheet) |
+| keys   🔑 | [🟢 create](#create-keys--) [🔵 read](#read-keys--) |
+| row    🚣 | [🟢 create](#create-row--) [🔵 read](#read-row--) [🟡 update](#update-row--) [🔴 delete](#delete-row) |
+| cells  🦠 | [🔵 read](#read-cells--) [🟡 update](#update-cells--) |
+<!--
+  🚨 WARNING: markdown anchor links are sensitive. Double-check they work if changing
+-->
 
 ## gsheet 🗓
 | request   | required          | options      | example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🔵 read | id | - | [read gsheet](#read-gsheet) |
+| 🔵 read | id | - | [read gsheet](#read-gsheet--) |
 
 ## sheet 🔖
 | request   | required          | options      | Example      |
@@ -71,47 +73,40 @@ gasup.read.sheet({
 
 # Examples
 
-### read gsheet
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🟢 🗓
+### read gsheet 🟢 🗓
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ----
 
-### create sheet
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🟢 🔖
-
+### create sheet 🟢 🔖
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 ```javascript
 gasup.create.sheet({
   sheetName: "A Cool Sheet"
 }).then( resp => console.log(resp.data) )
 ```
 
-### read sheet <!-- Warn! this is a linked title, review links emojis don't work -->
-🔵 🔖
-
+### read sheet 🔵 🔖
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 ```javascript
 gasup.read.sheet({
   sheetId: 350278289
 }).then( resp => console.log(resp.data) )
 ```
 
-### update sheet
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🟡 🔖
+### update sheet 🟡 🔖
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### delete sheet
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🔴 🔖
+### delete sheet 🔴 🔖
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ----
 
-# create keys 🟢 🔑
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
+### create keys 🟢 🔑
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 - <u>Required</u>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
 - <u>Options</u>: _no options_
 - <u>__NOTE__</u>: all __keys__ indexes' spaces are removed from string value. " name of " will become "nameof" as a key value in your sheet.
-
 
 ```javascript
 gasup.create.keys({
@@ -121,10 +116,9 @@ gasup.create.keys({
   .then( response => console.log(response) )
   .catch( error => console.log(error) )
 ```
-### read keys
-<!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🔵 🔑
 
+### read keys 🔵 🔑
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 ```javascript
 gasup.read.keys({
   sheetId: sheetId_inputValue.value,
@@ -135,25 +129,26 @@ gasup.read.keys({
 
 ----
 
-### create rows <!-- Warn! this is a linked title, review links emojis don't work -->
-🟢 🚣
+### create rows 🟢 🚣
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### read row <!-- Warn! this is a linked title, review links emojis don't work -->
-🔵 🚣
+### read row 🔵 🚣
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### update row <!-- Warn! this is a linked title, review links emojis don't work -->
-🟡 🚣
+### update row 🟡 🚣
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### delete row <!-- Warn! this is a linked title, review links emojis don't work -->
-🔴 🚣
+### delete row 🔴 🚣
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ----
 
-### update cells <!-- Warn! this is a linked title, review links emojis don't work -->
-🟡 🦠
+### update cells 🟡 🦠
+<!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### read cells <!-- Warn! this is a linked title, review links emojis don't work -->
-🔵 🦠
+### read cells 🔵 🦠
+<!-- WARNING! TITLE is LINKED, review links when changing -->
+
 
 ----
 # Error Handling
