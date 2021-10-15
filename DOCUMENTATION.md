@@ -43,7 +43,7 @@ gasup.read.sheet({
 ## sheet 🔖
 | request   | required          | options      | Example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet-🟢-🔖) |
+| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet) |
 | 🔵 read      | id, sheetId       | - |
 | 🟡 update     | | |
 | 🔴 delete     | | |
@@ -77,7 +77,7 @@ gasup.read.gsheet()
   .then( response => console.log("gsheet: ", resp.data) )
 ```
 
-### create sheet 🟢 🔖
+### create sheet
 ```javascript
 gasup.create.sheet({
   sheetName: "A Cool Sheet"
