@@ -30,7 +30,7 @@ gasup.read.sheet({
 | --------- | ------------------------------------- |
 | gsheet 🗓 | 🔵 read |
 | sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | [🟢 create](###create-keys) [🔵 read](###read-keys) |
+| keys   🔑 | [🟢 create](#create-keys) [🔵 read](#read-keys) |
 | row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
 | cells  🦠 | 🔵 read 🟡 update |
 
@@ -71,31 +71,40 @@ gasup.read.sheet({
 
 # Examples
 
-### read gsheet 🔵 🗓
+### read gsheet <!-- Warn! this is a linked title, review links emojis don't work -->
+🔵 🗓
+
 ```javascript
 gasup.read.gsheet()
   .then( response => console.log("gsheet: ", resp.data) )
 ```
-# 🟢 🔖
-### create sheet
+
+### create sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+🟢 🔖
+
 ```javascript
 gasup.create.sheet({
   sheetName: "A Cool Sheet"
 }).then( resp => console.log(resp.data) )
 ```
 
-### read sheet 🔵 🔖
+### read sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+🔵 🔖
+
 ```javascript
 gasup.read.sheet({
   sheetId: 350278289
 }).then( resp => console.log(resp.data) )
 ```
 
-### update sheet 🟡 🔖
+### update sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+🟡 🔖
 
-### delete sheet 🔴 🔖
+### delete sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+🔴 🔖
 
-### create keys 🟢 🔑
+### create keys <!-- Warn! this is a linked title, review links emojis don't work -->
+🟢 🔑
 - Required: __id__, __sheetId__, __keys__
 - Options: _no options_
 
@@ -117,13 +126,23 @@ gasup.read.keys({
   .catch( err => handle_error(err) )
 ```
 
-### create rows 🟢 🚣
-### read row 🔵 🚣
-### update row 🟡 🚣
-### delete row 🔴 🚣
+### create rows <!-- Warn! this is a linked title, review links emojis don't work -->
+🟢 🚣
 
-### update cells 🟡 🦠
-### read cells 🔵 🦠
+### read row <!-- Warn! this is a linked title, review links emojis don't work -->
+🔵 🚣
+
+### update row <!-- Warn! this is a linked title, review links emojis don't work -->
+🟡 🚣
+
+### delete row <!-- Warn! this is a linked title, review links emojis don't work -->
+🔴 🚣
+
+### update cells <!-- Warn! this is a linked title, review links emojis don't work -->
+🟡 🦠
+
+### read cells <!-- Warn! this is a linked title, review links emojis don't work -->
+🔵 🦠
 
 ----
 # Error Handling
