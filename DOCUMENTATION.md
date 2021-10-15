@@ -29,9 +29,9 @@ gasup.read.sheet({
 | scope     | CRUD operations available             |
 | --------- | ------------------------------------- |
 | gsheet 🗓 | [🔵 read](#read-gsheet--) |
-| sheet  🔖 | [🟢 create](#create-sheet--) [🔵 read](#read-sheet--) [🟡 update](#update-sheet--) [🔴 delete](#delete-sheet) |
+| sheet  🔖 | [🟢 create](#create-sheet--) [🔵 read](#read-sheet--) [🟡 update](#update-sheet--) [🔴 delete](#delete-sheet--) |
 | keys   🔑 | [🟢 create](#create-keys--) [🔵 read](#read-keys--) |
-| row    🚣 | [🟢 create](#create-row--) [🔵 read](#read-row--) [🟡 update](#update-row--) [🔴 delete](#delete-row) |
+| row    🚣 | [🟢 create](#create-row--) [🔵 read](#read-row--) [🟡 update](#update-row--) [🔴 delete](#delete-row--) |
 | cells  🦠 | [🔵 read](#read-cells--) [🟡 update](#update-cells--) |
 <!--
   🚨 WARNING: markdown anchor links are sensitive. Double-check they work if changing
