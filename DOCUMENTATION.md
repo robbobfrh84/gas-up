@@ -129,7 +129,7 @@ gasup.read.keys({
 
 ----
 
-### create rows 🟢 🚣
+### create row 🟢 🚣
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ### read row 🔵 🚣
@@ -143,10 +143,10 @@ gasup.read.keys({
 
 ----
 
-### update cells 🟡 🦠
+### read cells 🔵 🦠
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### read cells 🔵 🦠
+### update cells 🟡 🦠
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
 
