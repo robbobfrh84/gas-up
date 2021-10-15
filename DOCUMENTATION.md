@@ -71,15 +71,8 @@ gasup.read.sheet({
 
 # Examples
 
-### read gsheet <!-- Warn! this is a linked title, review links emojis don't work -->
-🔵 🗓
-
-```javascript
-gasup.read.gsheet()
-  .then( response => console.log("gsheet: ", resp.data) )
-```
-
-### create sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+### create sheet
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🔖
 
 ```javascript
@@ -97,13 +90,16 @@ gasup.read.sheet({
 }).then( resp => console.log(resp.data) )
 ```
 
-### update sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+### update sheet
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟡 🔖
 
-### delete sheet <!-- Warn! this is a linked title, review links emojis don't work -->
+### delete sheet
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🔴 🔖
 
-### create keys <!-- Warn! this is a linked title, review links emojis don't work -->
+### create keys
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🔑
 - Required: __id__, __sheetId__, __keys__
 - Options: _no options_
@@ -116,7 +112,9 @@ gasup.create.keys({
   .then( response => handle_response(response) )
   .catch( err => handle_error(err) )
 ```
-### read keys 🔵 🔑
+### read keys
+<!-- Warn! TITLE is LINKED, review links emojis don't work -->
+🔵 🔑
 
 ```javascript
 gasup.read.keys({
