@@ -106,7 +106,7 @@ gasup.read.sheet({
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
 - <ins>Options</ins>: _no options_
-- <ins>__NOTE__</ins>: all __keys__ indexes' spaces are removed from string value. " name of " will become "nameof" as a key value in your sheet.
+- <ins>__NOTE__</ins>: all __keys__ spaces are removed from string value. So, " name of " will become "nameof" as a key value in your sheet.
 
 ```javascript
 gasup.create.keys({

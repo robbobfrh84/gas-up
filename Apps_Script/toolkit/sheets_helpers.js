@@ -33,12 +33,7 @@ function add_A1_note_and_keys(newSheet, type, keys) {
   const A1Cell = newSheet.getRange(1, 1)
   const allCells = newSheet.getRange('1:'+newSheet.getMaxRows().toString()) //newSheet.getDataRange()
   if (type === "table") {
-    let addKeys = ["rowId"]
-    if (keys) {
-      let cleanKeys = keys.split(" ").join("").split(",")
-      addKeys = addKeys.concat(cleanKeys)
-    }
-    newSheet.appendRow(addKeys)
+    newSheet.appendRow(keys)
     newSheet.setColumnWidth(1, 38)
     allCells.setBackground("#fffff8")
     newSheet.getRange("1:1").setBackground("#ffffc8")
@@ -52,6 +47,7 @@ function add_A1_note_and_keys(newSheet, type, keys) {
     state: {}
   })
   A1Cell.setNote(sheet_json)
+
   return { sheet: newSheet, sheet_json }
 }
 

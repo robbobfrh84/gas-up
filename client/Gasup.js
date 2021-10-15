@@ -44,7 +44,7 @@ class Gasup {
     const keys = Object.keys(options)
     return "&" + keys.map( key => {
       let value = options[key]
-      if (typeof value == "object") value = JSON.stringify(value)
+      if (typeof value == "object") { value = JSON.stringify(value) }
       return key+'='+value
     }).join('&')
   }

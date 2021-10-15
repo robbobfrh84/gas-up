@@ -7,8 +7,14 @@ api_sheets_db.create_sheet = function({ id, sheetName, type, keys }) {
   type = type || "table" // *no type defaults to table
   const resp = is_valad_sheet_type(type)
   if (!resp.valad) { return resp.message } // *response error message if invalad
-
   if (!sheetName) return { error: "missing sheetName" }
+
+  let addKeys = ["rowId"]
+  if (keys) {
+    const cleanKeys = clean_keys(keys)
+    if (cleanKeys.error) { return { error: cleanKeys.error }}
+    addKeys = addKeys.concat(cleanKeys)
+  }
 
   const sheet = do_try(()=>{
     const gsheet = do_try(()=> SpreadsheetApp.openById(id) )
@@ -18,7 +24,7 @@ api_sheets_db.create_sheet = function({ id, sheetName, type, keys }) {
     }
     const endTabIndex = gsheet.getSheets().length
     const newSheet = gsheet.insertSheet(sheetName, endTabIndex)
-    const newSheetWithNote = add_A1_note_and_keys(newSheet, type, keys)
+    const newSheetWithNote = add_A1_note_and_keys(newSheet, type, addKeys)
     return newSheetWithNote
   })
   if (sheet.error) return sheet
@@ -67,10 +73,10 @@ api_sheets_db.read_sheet = function({ id, sheetId }) {
 
 // * 🛠 🔖 UPDATE sheet 🔖 🛠
 api_sheets_db.update_sheet = function({ id, sheetId, // REQUIRED
-  sheetName, type // *NOTE, add to "fields" 👇
+  sheetName, type // *NOTE, add to "fields" 👇 **⛳️**
 }) {
   const response = {}
-  const fields = { sheetName, type  }
+  const fields = { sheetName, type  } // **⛳️**
   let fieldsCnt = 0
   for (const field in fields) {
     if (fields[field]) fieldsCnt++

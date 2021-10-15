@@ -5,23 +5,26 @@
 api_sheets_db.create_keys = function({ id, sheetId, keys }) {
 
   const newKeys = do_try(()=>{
-    keys = keys.split(",")
+
+    const cleanKeys = clean_keys(keys)
+    if (cleanKeys.error) { return { error: cleanKeys.error } }
+
     const { sheet, error } = get_sheets(id, sheetId)
     if (error) return { error } // MUST be destructered, or { error: error }, just error causes bug.
     if (!is_sheet_type(sheet, "table")) {
       return { error: 'keys requests only for sheet type: table' }
     }
     const currentKeys = get_sheet_keys(sheet)
-    const duplicates = currentKeys.filter( v => keys.includes(v) )
+    const duplicates = currentKeys.filter( v => cleanKeys.includes(v) )
     if (duplicates.length > 0) {
       return {
         error: 'key(s) already exist, no new key(s) created',
         duplicate_keys: duplicates,
-        valad_keys_requested_not_created: keys.filter( v => !currentKeys.includes(v) )
+        valad_keys_requested_not_created: cleanKeys.filter( v => !currentKeys.includes(v) )
       }
     }
-    const newKeysCells = sheet.getRange(1,(currentKeys.length+1),1,keys.length)
-    newKeysCells.setValues([keys])
+    const newKeysCells = sheet.getRange(1,(currentKeys.length+1),1,cleanKeys.length)
+    newKeysCells.setValues([cleanKeys])
     return newKeysCells.getValues()[0]
   })
   if (newKeys.error) return newKeys

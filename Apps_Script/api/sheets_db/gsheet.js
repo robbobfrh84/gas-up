@@ -5,7 +5,7 @@
 api_sheets_db.create_gsheet = function() {
 
   return {
-    message: "Creating a google sheet must be done manually. However, i can be done by implimenting the SpreadsheetApp.create method.",
+    message: "Creating a google sheet MUST be done manually. However, it can be done by implimenting the SpreadsheetApp.create method.",
     google_sheets_link: " https://docs.google.com/spreadsheets/u/0/",
     implementation_reference: "https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#create(String)",
   }
