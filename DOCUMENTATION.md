@@ -30,7 +30,7 @@ gasup.read.sheet({
 | --------- | ------------------------------------- |
 | gsheet 🗓 | 🔵 read |
 | sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | [🟢 create](#create-keys-) [🔵 read](#read-keys) |
+| keys   🔑 | [🟢 create](#create-keys--) [🔵 read](#read-keys) |
 | row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
 | cells  🦠 | 🔵 read 🟡 update |
 
