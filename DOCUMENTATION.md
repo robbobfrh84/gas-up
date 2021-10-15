@@ -75,6 +75,8 @@ gasup.read.sheet({
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🗓
 
+----
+
 ### create sheet
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🔖
@@ -102,6 +104,8 @@ gasup.read.sheet({
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🔴 🔖
 
+----
+
 ### create keys
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 🟢 🔑
@@ -128,6 +132,8 @@ gasup.read.keys({
   .catch( err => handle_error(err) )
 ```
 
+----
+
 ### create rows <!-- Warn! this is a linked title, review links emojis don't work -->
 🟢 🚣
 
@@ -139,6 +145,8 @@ gasup.read.keys({
 
 ### delete row <!-- Warn! this is a linked title, review links emojis don't work -->
 🔴 🚣
+
+----
 
 ### update cells <!-- Warn! this is a linked title, review links emojis don't work -->
 🟡 🦠
