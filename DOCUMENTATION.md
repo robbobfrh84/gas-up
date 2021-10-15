@@ -15,6 +15,9 @@ Here, you'll find the complete GAS Up client-side javascript documentation for m
 
 **Requires**: [Gasup.js](https://github.com/robbobfrh84/gas-up/blob/master/client/Gasup.js) library file to be included in `<head>` of your .html file.
 
+### Setting up the SDK with your client side code
+...WIP TO DO!
+
 ### Example Request
 ```javascript
 gasup.read.sheet({
@@ -26,31 +29,32 @@ gasup.read.sheet({
 
 
 ## Requests Summery
-| scope     | CRUD operations available             |
+<!-- | scope     | CRUD operations available             |
 | --------- | ------------------------------------- |
 | gsheet 🗓 | [🔵 read](#read-gsheet--) |
 | sheet  🔖 | [🟢 create](#create-sheet--) [🔵 read](#read-sheet--) [🟡 update](#update-sheet--) [🔴 delete](#delete-sheet--) |
 | keys   🔑 | [🟢 create](#create-keys--) [🔵 read](#read-keys--) |
 | row    🚣 | [🟢 create](#create-row--) [🔵 read](#read-row--) [🟡 update](#update-row--) [🔴 delete](#delete-row--) |
-| cells  🦠 | [🔵 read](#read-cells--) [🟡 update](#update-cells--) |
+| cells  🦠 | [🔵 read](#read-cells--) [🟡 update](#update-cells--) | -->
+
 <!--
   🚨 WARNING: markdown anchor links are sensitive. Double-check they work if changing
 -->
 
-## gsheet 🗓
+#### gsheet 🗓
 | request   | required          | options      | example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🔵 read | id | - | [read gsheet](#read-gsheet--) |
+| 🔵 read | - | - | [read gsheet](#read-gsheet--) |
 
-## sheet 🔖
+#### sheet 🔖
 | request   | required          | options      | Example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet) |
-| 🔵 read      | id, sheetId       | - |
-| 🟡 update     | | |
-| 🔴 delete     | | |
+| 🟢 create    | sheetName     | type | [create sheet](#create-sheet--) |
+| 🔵 read      | sheetId       | - | [read sheet](#read-sheet--)
+| 🟡 update    | sheetId, +(_1 option_) | type, sheetName | [update sheet](#update-sheet--)
+| 🔴 delete    | sheetId | - | [delete sheet](#delete-sheet--)
 
-## keys 🔑
+#### keys 🔑
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
 | 🟢 create    | id, sheetName, keys     | type |
@@ -73,17 +77,73 @@ gasup.read.sheet({
 
 # Examples
 
+### template
+<!-- WARNING! TITLE is LINKED, review links when changing -->
+- <ins>Required</ins>: __sheetId__("string"), __keys__([array] of "strings"), __rowId__(object)
+- <ins>Options</ins>: _no options_
+- <ins>Returns</ins>:
+- <ins>__NOTE__</ins>: all __keys__ spaces are removed from string value. So, " name of " will become "nameof" as a key value in your sheet.
+
+```javascript
+gasup.x.x({
+
+})
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
+```
+
+
 ### read gsheet 🟢 🗓
 <!-- WARNING! TITLE is LINKED, review links when changing -->
+- <ins>Required</ins>: Only that the gasup SDK is initialized with sheet __id__
+- <ins>Options</ins>: _no options_
+- <ins>Returns</ins>: `response.data.sheets` includes an array of all sheet's info.
+
+```javascript
+gasup.read.gsheet()
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
+```
 
 ----
 
 ### create sheet 🟢 🔖
 <!-- WARNING! TITLE is LINKED, review links when changing -->
+- <ins>Required</ins>
+  - __sheetName__ ("string")
+- <ins>Options</ins>
+  - __type__ ("string"): "table" or "grid" only. Default is "table"
+  - __keys__ ([array] of "strings")
+- <ins>Returns</ins>: `response.data.sheet_json` includes sheetId and other info about your new sheet.
+- <ins>__NOTE__</ins>: You can create keys after creating a sheet.
+
+Example with a default "table"-type sheet.
 ```javascript
 gasup.create.sheet({
-  sheetName: "A Cool Sheet"
-}).then( resp => console.log(resp.data) )
+  sheetName: "A Cool Default Sheet"
+})
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
+```
+
+Example with __type__ option to create a "grid"-type sheet.
+```javascript
+gasup.create.sheet({
+  sheetName: "A Cool Grid Sheet",
+  type: "grid"
+})
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
+```
+
+Example with __keys__ option to create a "table"-type sheet with keys.
+```javascript
+gasup.create.sheet({
+  sheetName: "A Cool Keys Sheet",
+  keys: ["name","color"]
+})
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
 ```
 
 ### read sheet 🔵 🔖
@@ -104,8 +164,9 @@ gasup.read.sheet({
 
 ### create keys 🟢 🔑
 <!-- WARNING! TITLE is LINKED, review links when changing -->
-- <ins>Required</ins>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
-- <ins>Options</ins>: _no options_
+- <ins>Required</ins>
+  - __sheetId__("string"), __keys__([array] of "strings")
+- <ins>Options</ins> _no options_
 - <ins>__NOTE__</ins>: all __keys__ spaces are removed from string value. So, " name of " will become "nameof" as a key value in your sheet.
 
 ```javascript
