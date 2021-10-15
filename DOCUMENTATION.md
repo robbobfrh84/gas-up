@@ -77,7 +77,7 @@ gasup.read.sheet({
 
 # Examples
 
-### template
+## template
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>: __sheetId__("string"), __keys__([array] of "strings"), __rowId__(object)
 - <ins>Options</ins>: _no options_
@@ -93,12 +93,11 @@ gasup.x.x({
 ```
 
 
-### read gsheet 🟢 🗓
+## read gsheet 🟢 🗓
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>: Only that the gasup SDK is initialized with sheet __id__
 - <ins>Options</ins>: _no options_
 - <ins>Returns</ins>: `response.data.sheets` includes an array of all sheet's info.
-
 ```javascript
 gasup.read.gsheet()
   .then( response => console.log(response) )
@@ -107,7 +106,7 @@ gasup.read.gsheet()
 
 ----
 
-### create sheet 🟢 🔖
+## create sheet 🟢 🔖
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>
   - __sheetName__ ("string")
@@ -146,7 +145,7 @@ gasup.create.sheet({
   .catch( error => console.log(error) )
 ```
 
-### read sheet 🔵 🔖
+## read sheet 🔵 🔖
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 ```javascript
 gasup.read.sheet({
@@ -154,15 +153,15 @@ gasup.read.sheet({
 }).then( resp => console.log(resp.data) )
 ```
 
-### update sheet 🟡 🔖
+## update sheet 🟡 🔖
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### delete sheet 🔴 🔖
+## delete sheet 🔴 🔖
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ----
 
-### create keys 🟢 🔑
+## create keys 🟢 🔑
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>
   - __sheetId__("string"), __keys__([array] of "strings")
@@ -178,7 +177,7 @@ gasup.create.keys({
   .catch( error => console.log(error) )
 ```
 
-### read keys 🔵 🔑
+## read keys 🔵 🔑
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 ```javascript
 gasup.read.keys({
@@ -190,24 +189,24 @@ gasup.read.keys({
 
 ----
 
-### create row 🟢 🚣
+## create row 🟢 🚣
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### read row 🔵 🚣
+## read row 🔵 🚣
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### update row 🟡 🚣
+## update row 🟡 🚣
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### delete row 🔴 🚣
+## delete row 🔴 🚣
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
 ----
 
-### read cells 🔵 🦠
+## read cells 🔵 🦠
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
-### update cells 🟡 🦠
+## update cells 🟡 🦠
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 
 
