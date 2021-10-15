@@ -43,7 +43,7 @@ gasup.read.sheet({
 ## sheet 🔖
 | request   | required          | options      | Example      |
 | --------- | ----------------- | ------------ | ------------ |
-| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet) |
+| 🟢 create    | id, sheetName     | type | [create sheet](#create-sheet-🟢-🔖) |
 | 🔵 read      | id, sheetId       | - |
 | 🟡 update     | | |
 | 🔴 delete     | | |
