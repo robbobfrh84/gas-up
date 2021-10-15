@@ -10,7 +10,7 @@ Here, you'll find the complete GAS Up client-side javascript documentation for m
   - __keys__ 🔑: The first row of a table sheet, which designates the name for the values of entries in that column. Keys can only be _created_ an _read_ with the api.
 
   - __row__ 🚣: The data entries for a sheet table, names of values corrisponding with key row. Generated with a unique id. _All_ CRUD operations can be achieved on a row.
-  
+
   - __cells__ 🦠: the cell scope can only be used on grid-type sheets, which are more free form and ridged. Due to the nature of the scope, only _read_ and _update_ requests are needed.
 
 **Requires**: [Gasup.js](https://github.com/robbobfrh84/gas-up/blob/master/client/Gasup.js) library file to be included in `<head>` of your .html file.
@@ -30,7 +30,7 @@ gasup.read.sheet({
 | --------- | ------------------------------------- |
 | gsheet 🗓 | 🔵 read |
 | sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | 🟢 create 🔵 read |
+| keys   🔑 | 🟢 [create](###create-keys) 🔵 [read](###read-keys) |
 | row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
 | cells  🦠 | 🔵 read 🟡 update |
 
@@ -51,7 +51,7 @@ gasup.read.sheet({
 ## keys 🔑
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
-| 🟢 create    | id, sheetName     | type |
+| 🟢 create    | id, sheetName, keys     | type |
 | 🔵 read      | id, sheetId       | - |
 
 ## row 🚣
@@ -90,11 +90,32 @@ gasup.read.sheet({
   sheetId: 350278289
 }).then( resp => console.log(resp.data) )
 ```
+
 ### update sheet 🟡 🔖
+
 ### delete sheet 🔴 🔖
 
 ### create keys 🟢 🔑
+- Required: __id__, __sheetId__, __keys__
+- Options: _no options_
+
+```javascript
+gasup.create.keys({
+  sheetId: sheetId_inputValue.value,
+  keys: keys_inputValue.value
+})
+  .then( response => handle_response(response) )
+  .catch( err => handle_error(err) )
+```
 ### read keys 🔵 🔑
+
+```javascript
+gasup.read.keys({
+  sheetId: sheetId_inputValue.value,
+})
+  .then( response => handle_response(response) )
+  .catch( err => handle_error(err) )
+```
 
 ### create rows 🟢 🚣
 ### read row 🔵 🚣
