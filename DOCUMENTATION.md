@@ -76,7 +76,7 @@ gasup.read.sheet({
 gasup.read.gsheet()
   .then( response => console.log("gsheet: ", resp.data) )
 ```
-
+# 🟢 🔖
 ### create sheet
 ```javascript
 gasup.create.sheet({
