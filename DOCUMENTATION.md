@@ -30,7 +30,7 @@ gasup.read.sheet({
 | --------- | ------------------------------------- |
 | gsheet 🗓 | 🔵 read |
 | sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | [🟢 create](#create-) [🔵 read](#read-keys) |
+| keys   🔑 | [🟢 create](#create-keys) [🔵 read](#read-keys) |
 | row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
 | cells  🦠 | 🔵 read 🟡 update |
 
@@ -106,7 +106,7 @@ gasup.read.sheet({
 
 ----
 
-# create 🟢
+# create keys 🟢
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
 - <u>Required</u>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
 - <u>Options</u>: _no options_
