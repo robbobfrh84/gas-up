@@ -30,7 +30,7 @@ gasup.read.sheet({
 | --------- | ------------------------------------- |
 | gsheet 🗓 | 🔵 read |
 | sheet  🔖 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
-| keys   🔑 | [🟢 create](#create-keys) [🔵 read](#read-keys) |
+| keys   🔑 | [🟢 create](#create-keys-) [🔵 read](#read-keys) |
 | row    🚣 | 🟢 create 🔵 read 🟡 update 🔴 delete   |
 | cells  🦠 | 🔵 read 🟡 update |
 
@@ -106,19 +106,20 @@ gasup.read.sheet({
 
 ----
 
-### create keys
+### create keys 🟢 🔑
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
-🟢 🔑
-- Required: __id__, __sheetId__, __keys__
-- Options: _no options_
+- <u>Required</u>: __id__("string"), __sheetId__("string"), __keys__([array] of "strings")
+- <u>Options</u>: _no options_
+- <u>__NOTE__</u>: all __keys__ indexes' spaces are removed from string value. " name of " will become "nameof" as a key value in your sheet.
+
 
 ```javascript
 gasup.create.keys({
-  sheetId: sheetId_inputValue.value,
-  keys: keys_inputValue.value
+  sheetId: "1PGiogqhg1X_lYsN_HeS7m5Fa7oMF12kRmOkBCqZ-Wko", // example value
+  keys: ["name", "age"] // example values
 })
-  .then( response => handle_response(response) )
-  .catch( err => handle_error(err) )
+  .then( response => console.log(response) )
+  .catch( error => console.log(error) )
 ```
 ### read keys
 <!-- Warn! TITLE is LINKED, review links emojis don't work -->
