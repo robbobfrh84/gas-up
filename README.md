@@ -3,7 +3,8 @@
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
 - Customize your cloud "back-end" with an open-source Google Apps Script(GAS) library.
-- Great for prototyping web apps, hosting static data, microsites, internal apps, Iot apps and logging, and for whatever else some wacky person might dream up!
+
+### Great for prototyping web apps, hosting static data, microsites, internal apps, Iot apps and logging, and for whatever else some wacky person might dream up!
 
 ### How?
 Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
