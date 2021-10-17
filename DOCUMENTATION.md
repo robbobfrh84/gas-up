@@ -1,3 +1,15 @@
+# GAS Up Documentation
+Please visit our [wiki](https://github.com/robbobfrh84/gas-up/wiki) for complete documentation
+Complete URL: [https://github.com/robbobfrh84/gas-up/wiki](https://github.com/robbobfrh84/gas-up/wiki)
+
+
+-
+-
+-
+-
+-
+-
+----
 # GAS Up: CRUD API Documentation
 Here, you'll find the complete GAS Up client-side javascript documentation for modifying Google Sheets.
 - The API is structured so that the Google Sheets behave like a Simple database.
@@ -93,7 +105,7 @@ gasup.x.x({
 ```
 
 
-## read gsheet 🟢 🗓
+## read gsheet 🔵 🗓
 <!-- WARNING! TITLE is LINKED, review links when changing -->
 - <ins>Required</ins>: Only that the gasup SDK is initialized with sheet __id__
 - <ins>Options</ins>: _no options_
