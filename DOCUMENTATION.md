@@ -1,5 +1,5 @@
 # GAS Up Documentation
-Please visit our [wiki](https://github.com/robbobfrh84/gas-up/wiki) for complete documentation
+Please visit our [wiki](https://github.com/robbobfrh84/gas-up/wiki) for complete documentation.
 - Complete URL: [https://github.com/robbobfrh84/gas-up/wiki](https://github.com/robbobfrh84/gas-up/wiki)
 
 
@@ -85,7 +85,7 @@ gasup.read.sheet({
 ## row 🚣
 | request   | required          | options      |
 | --------- | ----------------- | ------------ |
-| 🟢 create    | ...     |  |
+| 🟢 create    | sheetId, row |  |
 | 🔵 read      | ...      |  |
 | 🟡 update     | | |
 | 🔴 delete     | | |
