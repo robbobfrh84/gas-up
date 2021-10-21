@@ -1,4 +1,4 @@
-# GAS Up
+# GAS Up ⛽️ 🚀
 ### Build Dynamic client-side **apps** with google sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
