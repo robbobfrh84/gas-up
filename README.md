@@ -1,8 +1,8 @@
 <!-- [![Tweet](https://img.shields.io/twitter/url/https/github.com/jonsn0w/hyde.svg?style=social)](https://twitter.com/BobMain49) -->
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/robbobfrh84/gas-up)
-[![made with love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/robbobfrh84/gas-up)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]
+[![made with love](https://img.shields.io/badge/Made%20With-Love-orange.svg)]
 
-[![clasp](https://github.com/google/clasp/actions/workflows/ci.yaml/badge.svg)](https://github.com/google/clasp)
+[![clasp](https://github.com/google/clasp/actions/workflows/ci.yaml/badge.svg)](https://github.com/robbobfrh84/gas-up)
 [![gas](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://developers.google.com/apps-script)
 
 
