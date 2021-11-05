@@ -4,19 +4,19 @@
 - The connected google sheet is laid out _like_ a database with tables and entries.
 - Customize your cloud "back-end" with an open-source Google Apps Script(GAS) library.
 
-### Accessible data, for quick and light full-stack
+### Accessible & updatable data, for a quick and light full-stack
 - Build microsites
-- Prototype a web apps
+- Prototype web apps
 - Host static data
 - Integrate Iot apps and logging,
 - Or, whatever else some wacky person might dream up 🤔😃🤯!
 
 ### How?
 Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
-- Select "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
+- Select: "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
 - Here, you can also add __Libraries__ that have already been created to do special things!
 
-### **GAS Up** is one of those libraries!
+### **GAS Up** is one of those libraries! And, It's open source!
 And, you don't need to add any Google Apps Script code of your own to get started. GAS Up creates an API that allows client-side apps to directly access, and update, data from any Google Sheet you own and allow access to.  
 
 ### Getting started: The Basics
