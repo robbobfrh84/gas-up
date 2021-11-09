@@ -43,6 +43,6 @@ Google Sheets allow for javascript to control and automate Google Sheets with wh
 
 ### **GAS Up** is an Apps Script library, and it's open source!
 You don't even need to add any Google Apps Script code of your own to get started.
-- GAS Up serves the API for client-side apps to directly. This allows the application to read and update data from any Google Sheet you own and allow access to. In addition, the Google Sheet itself can remain private.  
+- GAS Up serves the API for client-side apps directly. This allows the application to read and update data from any Google Sheet you own and allow access to. In addition, the Google Sheet itself can remain private.  
 
 - For instance, say you want to use GAS Up to create a simple page view counter. The Google sheet that is being updated can remain private, while the client-side app is still allowed to "ping" the GAS Up API to incremented a cells values each time a webpage is loaded to a browser.
