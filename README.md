@@ -6,7 +6,7 @@
 ![made with love](https://img.shields.io/badge/Made%20With-Love-orange.svg)
 
 
-# GAS Up ⛽️ 🚀 💞
+# GAS Up ⛽️ 🚀
 ### Build dynamic client-side apps using Google Sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
