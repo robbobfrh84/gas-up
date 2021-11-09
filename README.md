@@ -10,7 +10,7 @@
 ### Build dynamic client-side **apps** with google sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
-- Customize your cloud "back-end" with an open-source Google Apps Script(GAS) library.
+- Customize your cloud "back-end" with an open-source Google Apps Script(GAS) library *here* in this repository!
 
 ### Accessible & updatable data, for a quick and light full-stack
 - Build microsites
