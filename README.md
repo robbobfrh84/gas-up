@@ -19,6 +19,13 @@
 - Integrate Iot apps and logging,
 - Or, whatever else some wacky person might dream up 🤔😃🤯!
 
+## GAS Up Stack 
+A complete GAS Up application consists of three major components.
+- 1. A Google Sheet. 
+- 2. A Google Apps Script Library "bound" to that Google Sheet(1) 
+  - With the **gasup** library included.
+- 3. Client-side code with `gasup.js` library 
+
 ### How?
 Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
 - Select: "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
