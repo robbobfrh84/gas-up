@@ -7,7 +7,7 @@ NOTE: Logs added in descending order(newest up top)
 - Commit Sha:
 - Deploy Version:
 - App versions updated
-  - ... like, did you update the version for "GAS Up starter 13 -> to -> 14"?
+  - ... like, did you update the version for "GAS Up starter 13 -> to -> 16"?
 - NOTES:
   -
 
