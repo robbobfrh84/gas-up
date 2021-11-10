@@ -14,7 +14,7 @@ NOTE: Logs added in descending order(newest up top)
 ----
 ### v1.0.2
 Adding changes to `menu.js` within new Add-ons Google sheet Environment.
-- Commit Sha:
+- Commit Sha: 0a6aa6369b25890e8f33094eb264a1ca46c494ad
 - Deploy Version: Version 14 on Nov 10, 11:30 AM
 - App versions updated
   - GAS Up starter 13 -> to -> 14
