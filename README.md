@@ -5,7 +5,12 @@
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![made with love](https://img.shields.io/badge/Made%20With-Love-orange.svg)
 
-![alt text](https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png)
+<img src="https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png" width="100" height="100">
+
+<button> PRESS ME </button>
+<a href="tobob.earth"> link </a>
+
+
 
 # GAS Up ⛽️ 🚀
 ### Build dynamic client-side apps using Google Sheets as a database
