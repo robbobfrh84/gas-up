@@ -7,11 +7,20 @@ NOTE: Logs added in descending order(newest up top)
 - Commit Sha:
 - Deploy Version:
 - App versions updated
-  -
+  - ... like, did you update the version for "GAS Up starter"?
 - NOTES:
   -
 
 ----
+### v1.0.2
+Adding changes to `menu.js` within new Add-ons Google sheet Environment.
+- Commit Sha:
+- Deploy Version: Version 14 on Nov 10, 11:30 AM
+- App versions updated
+  - GAS Up starter
+- NOTES:
+  - This was all work around building the GAS Up starter Google Sheet and menu operations.
+
 ### v1.0.1
 GAS Up CRUD ALL Journey tester & Keys refactor
 - Commit Sha: 6af2d3d0b5ff3074ad9bbc640f039278599a2d3c

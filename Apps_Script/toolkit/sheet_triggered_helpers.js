@@ -75,17 +75,3 @@ function sheetTriggered_cellInput(e) {
 
   }
 }
-
-
-function sheetTriggered_createSheet({ sheetName, type, keys, id }) {
-  if (!sheetName) {
-    const ui = SpreadsheetApp.getUi()
-    sheetName = ui.prompt("Sheet name?").getResponseText()
-  }
-  const request = { sheetName, type, id,
-    scope: "sheet",
-    request: "create",
-  }
-  if (keys) request.keys = keys
-  return api_sheets_db.sheet.create(request)
-}

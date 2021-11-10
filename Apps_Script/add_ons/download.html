@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+      let data = <?!= JSON.stringify(dataFromServerTemplate) ?> // Stores the data directly in the javascript code
+
+      function downloadFile() {
+        document.getElementById("dlBtn").innerText = "Downloading..."
+        const d = document.createElement('a')
+        d.href = data.text
+        d.download = data.name
+        d.click()
+        document.getElementById("dlBtn").disabled = true
+      }
+
+    </script>
+  </head>
+  <body>
+    <h3> Download and open the .html file in your browser! </h3>
+    <button id="dlBtn" onclick="downloadFile()"> Download </button>
+  </body>
+</html>

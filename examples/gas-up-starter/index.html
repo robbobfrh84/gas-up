@@ -3,10 +3,108 @@
 <head>
   <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="../../client/Gasup.js" type="text/javascript"></script>
+  <script src="<?gasupTemplate-client_library_link/>" type="text/javascript"></script>
 </head>
 <body>
+
   <h1> GAS Up Starter: client-side example </h1>
+  <?gasupTemplate-sheetUrl/>
+  <hr>
+
+  <button onClick="requests('read_gsheet')"> Read Google Sheet </button>
+  <br><br>
+
+  <button onClick="requests('create_sheet')"> Create Sheet </button>
+  Sheet Name: <input id="sheetName" value="A new sheet🥳">
+
+  <em>Creates a new table sheet with keys "username" and "color"</em>
+  <br><br>
+
+  <button onClick="requests('read_sheet')"> Read Sheet </button>
+  sheetId: <input id="sheetId">
+  <br><br>
+
+  <button onClick="requests('create_row')"> Create Row </button>
+  sheetId: <input id="create_row_sheetId" value="">
+  username: <input id="username" value="Bob">
+  color: <input id="color" value="cornflowerblue">
+  <br><br>
+  <div id="loader"></div>
+  <textarea id="gasupResponse" rows="30" cols="100"></textarea>
 
 </body>
+<script>
+
+const deployId = "<?gasupTemplate-deployId/>"
+const id = "<?gasupTemplate-id/>"
+const gasup = new Gasup({ deployId, id })
+
+function requests(request) {
+  loader.style.display = "block"
+  window[request]()
+}
+
+function read_gsheet() {
+  gasup.read.gsheet()
+    .then( response => handle_response(response) )
+    .catch( error => handle_error(error) )
+}
+
+function create_sheet() {
+  gasup.create.sheet({
+    sheetName: sheetName.value,
+    keys: ["username","color"]
+  })
+    .then( response => handle_response(response) )
+    .catch( error => handle_error(error) )
+}
+
+function read_sheet() {
+  gasup.read.sheet({
+    sheetId: sheetId.value,
+  })
+    .then( response => handle_response(response) )
+    .catch( error => handle_error(error) )
+}
+
+function create_row() {
+  gasup.create.row({
+    sheetId: create_row_sheetId.value,
+    row: {
+      username: username.value,
+      color: color.value
+    }
+  })
+    .then( response => handle_response(response) )
+    .catch( error => handle_error(error) )
+}
+
+function handle_response(data) {
+  loader.style.display = "none"
+  gasupResponse.innerHTML = JSON.stringify(data, null, 2)
+}
+
+function handle_error(error) {
+  loader.style.display = "none"
+  gasupResponse.innerHTML = JSON.stringify(error, null, 2)
+}
+
+</script>
+<style media="screen">
+  #loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 5px;
+    display: none;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
 </html>
