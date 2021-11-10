@@ -7,11 +7,6 @@
 
 <img src="https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png" width="100" height="100">
 
-<button> PRESS ME </button>
-<a href="tobob.earth"> link </a>
-
-
-
 # GAS Up ⛽️ 🚀
 ### Build dynamic client-side apps using Google Sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
