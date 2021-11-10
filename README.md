@@ -5,9 +5,9 @@
 ![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![made with love](https://img.shields.io/badge/Made%20With-Love-orange.svg)
 
-<img src="https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png" width="100" height="100">
+<img src="https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png" width="200" height="200" margin-left="20px">
 
-# GAS Up ⛽️ 🚀
+# Welcome to the "GAS Up" Github repository ⛽️ 🚀
 ### Build dynamic client-side apps using Google Sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
