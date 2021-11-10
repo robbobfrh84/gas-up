@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewbox='0 0 500 500'>
+  <g transform="translate(211.5, 12) scale(.15) rotate(0, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(36, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(72, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(108, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(144, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(180, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(216, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(252, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(288, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+  <g transform="translate(211.5, 12) scale(.15) rotate(324, 250, 1586.6)">
+    <path d="M 160 379 A 156 156, 0, 1, 1, 352 379" fill="none" stroke-width='66' stroke='#333' stroke-linecap="round"/>
+    <circle cx="256" cy="256" r="86" fill='#444' />
+    <line  x1='256' y1='570' x2='256' y2='256' stroke='#444' stroke-width='55'/>
+  </g>
+
+  <g transform="translate(87.5, 87.5) scale(.65)">
+    <path d="M 107,180 L 393,180" stroke-width='20' stroke='cornflowerblue' stroke-linecap="round"/>
+    <path d="M 97,177
+      C 140,45 360,45 403,177
+      Z
+      " fill="cornflowerblue" />
+    <path d="M 97,208
+      C 75,210 75,280 97,292
+      L 402,292
+      C 425,290 425,210 402,208
+      Z
+      " fill="firebrick"/>
+    <path d="M 107,320 L 393,320" stroke-width='20' stroke='darkgoldenrod' stroke-linecap="round"/>
+    <path d="M 97,177
+      C 140,45 360,45 403,177
+      Z
+      " fill="darkgoldenrod" transform="rotate(180 250, 250)"/>
+    <circle fill='none' stroke-width='40' stroke='#333' cx="250" cy="250" r="220"/>
+  </g>
+</svg>
