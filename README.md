@@ -20,14 +20,15 @@
 - Integrate Iot apps and logging,
 - Or, whatever else some wacky person might dream up 🤔😃🤯!
 
+### Getting started
+For a "quick guide" to get up and running in a couple minutes, visit the [Getting started](https://github.com/robbobfrh84/gas-up/wiki/getting-started) section of our wiki.
+
+----
 ## GAS Up Stack
 A complete GAS Up application consists of three major components.
 - The **Client-side API library**
 - A **Google Sheet**.  
 - The **GAS Up** Apps Script Library "bound" to that Google Sheet.
-
-### Getting started
-For a "quick guide" to get up and running in a couple minutes, visit the [Getting started](https://github.com/robbobfrh84/gas-up/wiki/getting-started) section of our wiki.
 
 ### Documentation
 All the documentation lives in our github [wiki](https://github.com/robbobfrh84/gas-up/wiki) page.
