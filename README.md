@@ -40,7 +40,7 @@ Visit our [discussion](https://github.com/robbobfrh84/gas-up/discussions) forum!
 ----
 # How Does this work?
 Google Sheets allow for javascript to control and automate Google Sheets with what they call "Google Apps Scripts". To see a simple example of this, start by creating a new [Google Sheet](sheet.google.com).
-- Select: "Tools" > "Script editor" to see where you'd code your "Google Apps Script" app.
+- Select: "Extensions" > "Script editor" to see where you'd code your "Google Apps Script" app.
 - Here, you can also add __Libraries__ that have already been created to do special things!
 
 ### **GAS Up** is an Apps Script library, and it's open source!
