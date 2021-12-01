@@ -7,7 +7,7 @@
 
 <img src="https://robbobfrh84.github.io/gas-up/assets/images/icons/icon-D-flipped.png" width="250" height="250" margin-left="20px">
 
-# Welcome to the "GAS Up" Github repository ⚡️ 🚀
+# Welcome to the "GAS Up" Github repository ⛽️ 🚀
 ### Build dynamic client-side apps using Google Sheets as a database
 - Build, read, update and delete sheets with client-side API requests.
 - The connected google sheet is laid out _like_ a database with tables and entries.
