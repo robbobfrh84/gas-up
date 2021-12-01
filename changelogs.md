@@ -15,7 +15,7 @@ NOTE: Logs added in descending order(newest up top)
 ----
 ### v1.0.3
 Top 5, raw image function handler
-- Commit Sha:
+- Commit Sha: a8a50c8b0b614bb2c2a94bc686680dab168d9666
 - Deploy Version: Version 17 on Dec 1, 8:06 AM
 - App versions updated
   - tobob.earth: client `gasup.js` -> v1.0.2 -> v1.0.3
