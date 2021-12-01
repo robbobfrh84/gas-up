@@ -1,0 +1,140 @@
+#rank_page {
+  position: absolute;
+  overflow-y: scroll;
+  font-family: Tahoma;
+  top: var(--title_height);
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding-top: 20px;
+  width: var(--rank_page_container_width);
+}
+
+.rank-card {
+  position: relative;
+  background-color: rgba(0,0,0,0.05);
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 3px solid var(--primary_border);
+  font-size: 0px;
+  height: 40px;
+  width: 300px;
+  opacity: 1;
+  transition: width .3s, height .3s, opacity 1s;
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.rank-card_poster {
+  position: absolute;
+  right: 0px;
+  border-left: 3px solid var(--primary_border);
+  height: 100%;
+}
+
+.rank-card_poster > img {
+  height: 100%;
+}
+
+.rank-card_rank {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-bottom: 2px solid var(--secondary_border);
+  border-right: 2px solid var(--secondary_border);
+  box-sizing: border-box;
+  height: 60%;
+  width: 60px;
+  background: url("../gfx/light_grain.png");
+  border-radius: 0px 0px 3px 0px;
+  display: table;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.7);
+  transition: width 1s, height 1s, box-shadow 1s;
+}
+
+.rank-card_rank > div {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  font-size: 30px;
+  color: rgba(0,0,0,0.7);
+  transition: font-size 2s;
+}
+
+.rank-card_rank > div > span:first-child {
+  position: relative;
+  top: -5px;
+  font-size: 15px;
+}
+
+.rank-card_title {
+  font-family: Tahoma;
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  right: 0px;
+  height: 60%;
+  padding-right: 100px;
+  padding-left: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: padding-left .3s;
+}
+
+.rank-card_title > div {
+  height: 100%;
+  display: table;
+  overflow: hidden;
+}
+
+.rank-card_title_font {
+  font-size: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  transition: font-size 1s;
+}
+
+
+/* 🏂 🏂 HOVERS 🏂 🏂 */
+
+.rank-card:hover {
+  height: 130px !important;
+  transition: height .3s;
+}
+.rank-card:hover .rank-card_rank {
+  width: 80px !important;
+  height: 80px !important;
+  box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.3);
+  transition: width .3s, height .3s, box-shadow .3s;
+}
+.rank-card:hover .rank-card_rank > div {
+  font-size: 40px !important;
+  transition: font-size .3s;
+}
+.rank-card:hover .rank-card_title {
+  left: 65px;
+  font-size: 27px !important;
+  transition: left .3s;
+}
+.rank-card:hover .rank-card_title_font {
+  font-size: 27px !important;
+  transition: font-size .3s;
+}
+.rank-card:hover .rank-card_table-amazon > div > a > div,
+.rank-card:hover .rank-card_table-tweet > div > a > div {
+  top: 10px;
+  transition: top .3s;
+}
+.rank-card:hover .rank-card_table-amazon > div > a > img,
+.rank-card:hover .rank-card_table-tweet > div > a > img {
+  padding-top: 4px;
+  width: 36px;
+  height: 36px;
+  transition: width .3s, height .3s, padding-top .3s;
+}

@@ -5,6 +5,10 @@
 
       let data = <?!= JSON.stringify(dataFromServerTemplate) ?> // Stores the data directly in the javascript code
 
+      window.onload = function(){
+        window.popup_content.innerHTML = data.popup_content
+      }
+
       function downloadFile() {
         document.getElementById("dlBtn").innerText = "Downloading..."
         const d = document.createElement('a')
@@ -12,12 +16,36 @@
         d.download = data.name
         d.click()
         document.getElementById("dlBtn").disabled = true
+        google.script.host.close()
       }
 
     </script>
+
+    <style media="screen">
+      * {
+        font-family: sans-serif;
+      }
+      #dlBtn {
+        border: none;
+        font-family: sans-serif;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 1px;
+        background-color: rgba(128,0,0,1);
+        margin: 10px;
+        padding: 10px;
+        opacity: 0.8;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      #dlBtn:hover {
+        background-color: rgba(128,0,1,0.8);
+        transition: background-color 0.3s;
+      }
+    </style>
   </head>
   <body>
-    <h3> Download and open the .html file in your browser! </h3>
-    <button id="dlBtn" onclick="downloadFile()"> Download </button>
+    <div id="popup_content"> ...place holder...</div>
+    <button id="dlBtn" onclick="downloadFile()"> DOWNLOAD </button>
   </body>
 </html>

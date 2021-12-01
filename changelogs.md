@@ -8,10 +8,21 @@ NOTE: Logs added in descending order(newest up top)
 - Deploy Version:
 - App versions updated
   - ... like, did you update the version for "GAS Up starter 13 -> to -> 16"?
+  - ... example: "tobob.earth: client `gasup.js` -> v1.0.2 -> v1.0.3"
 - NOTES:
   -
 
 ----
+### v1.0.3
+Top 5, raw image function handler
+- Commit Sha:
+- Deploy Version: Version 17 on Dec 1, 8:06 AM
+- App versions updated
+  - tobob.earth: client `gasup.js` -> v1.0.2 -> v1.0.3
+- NOTES:
+  - pretty big and dirty update with a lot of changes on the fly as I built out top 5.
+
+
 ### v1.0.2
 Adding changes to `menu.js` within new Add-ons Google sheet Environment.
 - Commit Sha: 0a6aa6369b25890e8f33094eb264a1ca46c494ad

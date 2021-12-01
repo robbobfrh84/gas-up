@@ -46,13 +46,15 @@ api_sheets_db.read_sheet = function({ id, sheetId }) {
 
   const sheetObj = do_try(()=>{
     const values = sheet.getDataRange().getValues()
+    const forumulas = sheet.getDataRange().getFormulas()
     const sheet_metaData = get_sheet_A1_metadata(sheet).sheet_metaData
     if ( sheet_metaData && sheet_metaData.type === "table" ) {
       const keys = get_sheet_keys(sheet)
       values.shift()
+      forumulas.shift()
       const rows = []
-      values.forEach( row => {
-        rowObj = rowObj_builder(keys, row).row
+      values.forEach( (row, rowIndex) => {
+        rowObj = rowObj_builder(keys, row, forumulas[rowIndex]).row
         rowObj.rowId = rowObj.rowId
         rows.push(rowObj)
       })

@@ -101,7 +101,7 @@ api_sheets_db.update_row = function({id, sheetId, rowId, row}) {
       return { error: "requested key(s) don't exist.", keys: noKeys }
     }
 
-    const updatedArr = range
+    const updatedArr = [...range]
     Object.keys(row).map( (key, index) => {
       updatedArr[rowObj.indices[key]] = row[key]
     })

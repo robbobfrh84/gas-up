@@ -42,7 +42,12 @@ function asJSON(e, type, requestEvent) {
     obj.gas_up_request = message
   }
 
-  return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON)
+  if (e.parameter.testInScriptEditor) {
+    return obj
+  } else {
+    return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON)
+  } 
+  
 }
 
 function rootResponseAsJSON(e) {

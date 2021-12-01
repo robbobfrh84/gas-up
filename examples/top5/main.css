@@ -1,0 +1,19 @@
+body {
+  background-color: #ddd;
+}
+.loader_link-container {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 7px;
+}
+.sheet {
+  background-color: #ccc;
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 40px;
+  padding-left: 20px;
+}

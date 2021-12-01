@@ -24,10 +24,20 @@ api_sheets_db.read_cells = function({ id, sheetId, cells }) {
     if (cells.split(',').length == 4 ) {
       const c = cells.split(',')
       cellsValues = do_try(()=> sheet.getRange(c[0],c[1],c[2],c[3]).getValues() )
+      cellsFormulas = do_try(()=> sheet.getRange(c[0],c[1],c[2],c[3]).getFormulas() )
     } else {
       cellsValues = do_try(()=> sheet.getRange(cells).getValues() )
+      cellsFormulas = do_try(()=> sheet.getRange(cells).getFormulas() )
     }
-    if (cellsValues.error) return { error: "cells read range formatting error" }
+    if (cellsValues.error) return { error: "cells read range formatting error for cell values." }
+    if (cellsFormulas.error) return { error: "cells read range formatting error for cell formulas" }
+
+    cellsValues.forEach( (rows, i) => {
+      rows = rows.forEach( (cell, j) => {
+        const value = value_parser(cell, cellsFormulas[i][j])
+        cellsValues[i][j] = value
+      })
+    })
 
     if (cellsValues.length == 1 && cellsValues[0].length == 1) {
       cellsValues = cellsValues[0][0]

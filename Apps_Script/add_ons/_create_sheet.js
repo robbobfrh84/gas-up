@@ -1,25 +1,14 @@
-function startWorkflow() {
-  console.log("startWorkflow()")
-  return false
-}
-
-function checkWorkflow() {
-  console.log("checkWorkflow()")
-  return false
-}
-
-function createTable() {
-  const id = SpreadsheetApp.getActiveSpreadsheet().getId()
-  const table = menuTriggered_createSheet({ id, type: "table" })
-  if (table.error) return SpreadsheetApp.getUi().alert(table.error)
-  SpreadsheetApp.getUi().alert('Successfully created table sheet "'+table.sheetName+'"')
-}
-
-function createGrid() {
-  const id = SpreadsheetApp.getActiveSpreadsheet().getId()
-  const grid = menuTriggered_createSheet({ id, type: "grid" })
-  if (grid.error) return SpreadsheetApp.getUi().alert(grid.error)
-  SpreadsheetApp.getUi().alert('Successfully created grid sheet "'+grid.sheetName+'"')
+function menuTriggered_createSheet({ sheetName, type, keys, id }) {
+  if (!sheetName) {
+    const ui = SpreadsheetApp.getUi()
+    sheetName = ui.prompt("Sheet name?").getResponseText()
+  }
+  const request = { sheetName, type, id,
+    scope: "sheet",
+    request: "create",
+  }
+  if (keys) request.keys = keys
+  return api_sheets_db.sheet.create(request)
 }
 
 function createRootSheet() {
@@ -65,15 +54,16 @@ function createRootSheet() {
   SpreadsheetApp.getUi().alert('You have created a new GAS Up table sheet! Select the new tab below 👇 to see.')
 }
 
-function menuTriggered_createSheet({ sheetName, type, keys, id }) {
-  if (!sheetName) {
-    const ui = SpreadsheetApp.getUi()
-    sheetName = ui.prompt("Sheet name?").getResponseText()
-  }
-  const request = { sheetName, type, id,
-    scope: "sheet",
-    request: "create",
-  }
-  if (keys) request.keys = keys
-  return api_sheets_db.sheet.create(request)
+function createTable() {
+  const id = SpreadsheetApp.getActiveSpreadsheet().getId()
+  const table = menuTriggered_createSheet({ id, type: "table" })
+  if (table.error) return SpreadsheetApp.getUi().alert(table.error)
+  SpreadsheetApp.getUi().alert('Successfully created table sheet "'+table.sheetName+'"')
+}
+
+function createGrid() {
+  const id = SpreadsheetApp.getActiveSpreadsheet().getId()
+  const grid = menuTriggered_createSheet({ id, type: "grid" })
+  if (grid.error) return SpreadsheetApp.getUi().alert(grid.error)
+  SpreadsheetApp.getUi().alert('Successfully created grid sheet "'+grid.sheetName+'"')
 }

@@ -28,7 +28,22 @@ function onOpen(e) {
       menu.addSubMenu(SpreadsheetApp.getUi().createMenu('Web app examples')
         .addItem('GAS Up Starter', 'gasup.gasUpStarter') // see: add-ons folder
       )
+      menu.addSubMenu(SpreadsheetApp.getUi().createMenu('Get static JSON')
+        .addItem('gsheet.json', 'gasup.getStaticJson_JSON') // see: add-ons folder
+        .addItem('gsheet.js', 'gasup.getStaticJson_js') // see: add-ons folder
+      )
     }
   }
   menu.addToUi();
+}
+
+// 🧪 ⏰ FOR LATER TESTING WITH CHECKING AUTHENTICATION
+function startWorkflow() {
+  console.log("startWorkflow()")
+  return false
+}
+
+function checkWorkflow() {
+  console.log("checkWorkflow()")
+  return false
 }
