@@ -36,6 +36,14 @@ All the documentation lives in our github [wiki](https://github.com/robbobfrh84/
 ### Questions, bugs, issues, help, existentail crises relating to GAS Up
 Visit our [discussion](https://github.com/robbobfrh84/gas-up/discussions) forum!
 
+----
+# Built with GAS Up 🏗
+
+### tobob.earth (Bob Main's portfolio)
+
+- Web app link: 
+- Public Google Sheet:
+- Github Repository: https://github.com/robbobfrh84/tobob.earth
 
 ----
 # How Does this work?
