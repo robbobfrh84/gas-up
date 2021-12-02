@@ -62,9 +62,9 @@ A personal portfolio for Bob Main. Built with and managed with GAS Up while also
 - Github Repository: https://github.com/robbobfrh84/tobob.earth
 
 <span> ✨ </span> 
-<img src="https://storage.googleapis.com/tobob_earth/tobob_earth_showcase_gsheet2.gif" width="250" margin-left="20px">
+<img src="https://storage.googleapis.com/tobob_earth/tobob_earth_showcase_gsheet3.gif" width="250" margin-left="20px">
 <span> ✨ 🔮 ✨ </span>
-<img src="https://storage.googleapis.com/tobob_earth/tobob_earth_showcase2.gif" width="250" margin-left="20px">
+<img src="https://storage.googleapis.com/tobob_earth/tobob_earth_showcase3.gif" width="250" margin-left="20px">
 <span> ✨ </span>
 
 ## Top 5
