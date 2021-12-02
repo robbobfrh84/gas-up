@@ -75,7 +75,7 @@ A web app using GAS Up to host top 5 rankings of everything that's important, re
 - Github Repository: https://github.com/robbobfrh84/gas-up/tree/master/examples/top5
 
 <span> ✨ </span>
-<img src="https://storage.googleapis.com/gasup/top5/top5_movies_sheet.gif" width="250" margin-left="20px">
+<img src="https://storage.googleapis.com/gasup/top5/tobob_earth_showcase.gif" width="250" margin-left="20px">
 <span> ✨ 🔮 ✨ </span>
 <img src="https://storage.googleapis.com/gasup/top5/top5_movies_browser.gif" width="250" margin-left="20px">
 <span> ✨ </span>
