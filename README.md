@@ -39,17 +39,21 @@ Visit our [discussion](https://github.com/robbobfrh84/gas-up/discussions) forum!
 ----
 # Built with GAS Up 🏗
 
-### tobob.earth 
+### tobob.earth
 A personal portfolio for Bob Main. Built with and managed with GAS Up while also tracking basic site analytic and root data!
 
 - Web App: https://tobob.earth/#landing
 - Public Google Sheet: https://docs.google.com/spreadsheets/d/1h7AQcnPrSPL9kwPwcBwkRRHB_VIdJ-NszRY1eYJHf24/edit#gid=1906007068
 - Github Repository: https://github.com/robbobfrh84/tobob.earth
- 
-<img src="https://storage.googleapis.com/bobs_lab_bucket/tobob_earth_screenshot.png" width="250" height="250" margin-left="20px">
+
+<img src="https://storage.googleapis.com/tobob_earth/tobob_earth_showcase.gif" width="250" margin-left="20px">
 
 ### Top 5
-A web app using GAS Up to host top 5 rankings of everything that's important, relivant reverant, and most importantly irrelivant! 
+A web app using GAS Up to host top 5 rankings of everything that's important, relevant reverent, and most importantly irrelevant!
+
+- Web App: https://robbobfrh84.github.io/gas-up/examples/top5
+- Public Google Sheet: https://docs.google.com/spreadsheets/d/1KrabEzohbEZwELTIqE7cRjLIQaGJFS95I2qR5mw4FpU/edit#gid=685369503
+- Github Repository: https://github.com/robbobfrh84/gas-up/tree/master/examples/top5
 
 ----
 # How Does this work?
