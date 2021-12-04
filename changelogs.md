@@ -13,6 +13,16 @@ NOTE: Logs added in descending order(newest up top)
   -
 
 ----
+### v1.0.4
+Adding Increment value to an update row value
+- Commit Sha:
+- Deploy Version: Version 20 on Dec 3, 4:19 PM
+- App versions updated
+  - Added 'type' option to update row and 'increment' action to add +1 to cell value in row. 
+- NOTES:
+  - This is the only operation for use the 'type' option when replacing 'row' option in update row.
+
+
 ### v1.0.3
 Top 5, raw image function handler
 - Commit Sha: a8a50c8b0b614bb2c2a94bc686680dab168d9666
