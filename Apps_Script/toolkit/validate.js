@@ -1,9 +1,20 @@
-function validate(p, fields) { // someday this could go to toolkit. it's universal and not unique to api.
+function validate(p, fields) {
   const missing = []
   if (fields) {
     fields.forEach( field =>{
       if (!p[field]) {
-        missing.push(field)
+        if (Array.isArray(field)) {
+          // arrays validate to only 1 to be required
+          const m = []
+          field.forEach( f => {
+            if (!p[f]) { m.push(f) }
+          })
+          if (m.length == field.length) {
+            missing.push(field)
+          }
+        } else {
+          missing.push(field)
+        }
       }
     })
   }

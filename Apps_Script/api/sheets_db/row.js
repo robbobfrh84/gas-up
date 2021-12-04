@@ -84,8 +84,37 @@ api_sheets_db.read_row = function({ id, sheetId, rowId }) {
 
 
 // * 🛠 🚣 UPDATE row 🚣 🛠
-api_sheets_db.update_row = function({id, sheetId, rowId, row}) {
-  row = JSON.parse(decodeURIComponent(row))
+api_sheets_db.update_row = function({id, sheetId, rowId, row, type}) {
+  row = row ? JSON.parse(decodeURIComponent(row)) : false
+  type = type ? JSON.parse(decodeURIComponent(type)) : false
+
+  // 🚨 👇 WARNING this condition order is sensative.
+  if (type && row) {
+    return { error: "Row 'type' updates cannot include a 'row' object in request." }
+  } else if (Object.keys(type).length > 1) {
+    return { error: "Only 1 row 'type' update per request" }
+  }
+
+  if (type) {
+    const typeName = Object.keys(type)[0]
+    const typeKey = type[typeName]
+    if (typeName == "increment") {
+      const incrementRow = this.read_row({ id, sheetId, rowId }).row.rowObj
+      row = {}
+      if (incrementRow.hasOwnProperty(typeKey)) {
+        row[typeKey] = incrementRow[typeKey] + 1
+      } else {
+        return { error: "requested key does not exist.", key: typeKey }
+      }
+    } else {
+      return { error: "We do not recognize this 'type' row update: ", type: type }
+    }
+  }
+
+  if (!row) { // needs to check after type because it could have created it.
+    return { error: "You need to included a row, or valad type to update" }
+  }
+  // 🚨 ☝️ WARNING this condition order is sensative.
 
   const updatedRow = do_try(()=>{
     const { sheet, gsheet, error } = get_sheets(id, sheetId)

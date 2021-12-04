@@ -26,7 +26,7 @@ const api_sheets_db = { // CRUD ✨📖🛠❌
   row: { // 🚣‍
     create: p => validate(p, [ "id", "sheetId", "row" ]),
     read:   p => validate(p, [ "id", "sheetId", "rowId" ]),
-    update: p => validate(p, [ "id", "sheetId", "rowId", "row" ]),
+    update: p => validate(p, [ "id", "sheetId", "rowId", [ "row", "type" ] ]), // arrays validate to only 1 to be required
     delete: p => validate(p, [ "id", "sheetId", "rowId" ]),
   },
   cells: { // 🦠
