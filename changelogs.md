@@ -15,7 +15,7 @@ NOTE: Logs added in descending order(newest up top)
 ----
 ### v1.0.4
 Adding Increment value to an update row value
-- Commit Sha:
+- Commit Sha: e19abe52a5196f19b52ebf5861410b2462c5b2d7
 - Deploy Version: Version 20 on Dec 3, 4:19 PM
 - App versions updated
   - Added 'type' option to update row and 'increment' action to add +1 to cell value in row. 
