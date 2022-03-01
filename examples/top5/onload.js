@@ -13,9 +13,9 @@ const start = function() {
     gasup: new Gasup({
       id: "1KrabEzohbEZwELTIqE7cRjLIQaGJFS95I2qR5mw4FpU", // ⭐️ Google Sheet Id.
       // Dev 🟡 👇
-      deployId: "AKfycbx2I_khrgqjxp0mJWYhk46mm3q4HF_rKzlVap1EweR1A3V2ybvByhxxnbW1uROD2vdF",
+      // deployId: "AKfycbx2I_khrgqjxp0mJWYhk46mm3q4HF_rKzlVap1EweR1A3V2ybvByhxxnbW1uROD2vdF",
       // Prod 🟢 👇
-      // deployId: "AKfycbwtsMtfeQXzBX5qQaXU-lxw_S8iAu35XUnDKr1xJgdqr4ZnGvQxFdX6GED6XqGLhrNHFw",
+      deployId: "AKfycbwtsMtfeQXzBX5qQaXU-lxw_S8iAu35XUnDKr1xJgdqr4ZnGvQxFdX6GED6XqGLhrNHFw",
     })
   }
 
