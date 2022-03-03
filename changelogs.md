@@ -2,7 +2,7 @@
 NOTE: Logs added in descending order(newest up top)
 
 ## Template
-### vX.X.X
+### vX.X.X (Deploy Version #)
 <Short Descriptions / title>
 - Commit Sha:
 - Deploy Version:
