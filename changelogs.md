@@ -7,7 +7,8 @@ NOTE: Logs added in descending order(newest up top)
 - Commit Sha:
 - Deploy Version:
 - Permanent URL Version ID(Version ??): ``
-- App versions updated
+- Client Side `Gasup_vX.X.X.js` added (ONLY IF IT WAS CHANGED!)
+- Updated
   - ... like, did you update the version for "GAS Up starter 13 -> to -> 16"?
   - ... example: "tobob.earth: client `gasup.js` -> v1.0.2 -> v1.0.3"
 - NOTES:
@@ -19,7 +20,8 @@ Adding Increment value to an update row value
 - Commit Sha: e19abe52a5196f19b52ebf5861410b2462c5b2d7
 - Deploy Version: Version 20 on Dec 3, 4:19 PM
 - Permanent URL ID (Version 21): `AKfycbyNU31L91lHbB5iJtLYb2kF-h1usQHKIclJFlt58xQGv3LLd__Wy4nNat721b3IP0SgGA`
-- App versions updated
+- Client Side `Gasup_v1.0.4.js` added 
+- Updated
   - Added 'type' option to update row and 'increment' action to add +1 to cell value in row.
 - NOTES:
   - This is the only operation for use the 'type' option when replacing 'row' option in update row.
