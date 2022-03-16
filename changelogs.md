@@ -6,7 +6,7 @@ NOTE: Logs added in descending order(newest up top)
 <Short Descriptions / title>
 - Commit Sha:
 - Deploy Version:
-- Permanent URL Version ID: ``
+- Permanent URL Version ID(#???): ``
 - Client Side `Gasup_vX.X.X.js` added (ONLY IF IT WAS CHANGED!)
 - Updated
   - ... like, did you update the version for "GAS Up starter 13 -> to -> 16"?
@@ -20,7 +20,7 @@ NOTE: Logs added in descending order(newest up top)
 Single User Authentication Addition
 - Commit Sha: 2638bf02b55a38649a7b91efb7d1175ac92559e5
 - Deploy Version: Version 22 on Mar 16, 7:46 AM
-- Permanent URL Version ID: `AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ`
+- Permanent URL Version ID(23): `AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ`
 - Client Side `Gasup_v1.1.0.js` 
 - Updated
   - Client side gets addition of `app` as a top level parameter in requests, same level as scope & request
@@ -37,7 +37,7 @@ Single User Authentication Addition
 Adding Increment value to an update row value
 - Commit Sha: e19abe52a5196f19b52ebf5861410b2462c5b2d7
 - Deploy Version: Version 20 on Dec 3, 4:19 PM
-- Permanent URL ID (Version 21): `AKfycbyNU31L91lHbB5iJtLYb2kF-h1usQHKIclJFlt58xQGv3LLd__Wy4nNat721b3IP0SgGA`
+- Permanent URL ID (21): `AKfycbyNU31L91lHbB5iJtLYb2kF-h1usQHKIclJFlt58xQGv3LLd__Wy4nNat721b3IP0SgGA`
 - Client Side `Gasup_v1.0.4.js` added 
 - Updated
   - Added 'type' option to update row and 'increment' action to add +1 to cell value in row.
