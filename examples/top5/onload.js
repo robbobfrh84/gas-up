@@ -17,7 +17,7 @@ const start = function() {
       // Prod Head 🟢 👇
       // deployId: "AKfycbwtsMtfeQXzBX5qQaXU-lxw_S8iAu35XUnDKr1xJgdqr4ZnGvQxFdX6GED6XqGLhrNHFw",
       // Prod Version 25 🟢 👇
-      deployId: " "AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ",
+      deployId: "AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ",
     })
   }
 
