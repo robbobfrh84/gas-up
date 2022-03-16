@@ -13,9 +13,11 @@ const start = function() {
     gasup: new Gasup({
       id: "1KrabEzohbEZwELTIqE7cRjLIQaGJFS95I2qR5mw4FpU", // ⭐️ Google Sheet Id.
       // Dev 🟡 👇
-      deployId: "AKfycbx2I_khrgqjxp0mJWYhk46mm3q4HF_rKzlVap1EweR1A3V2ybvByhxxnbW1uROD2vdF",
-      // Prod 🟢 👇
+      // deployId: "AKfycbx2I_khrgqjxp0mJWYhk46mm3q4HF_rKzlVap1EweR1A3V2ybvByhxxnbW1uROD2vdF",
+      // Prod Head 🟢 👇
       // deployId: "AKfycbwtsMtfeQXzBX5qQaXU-lxw_S8iAu35XUnDKr1xJgdqr4ZnGvQxFdX6GED6XqGLhrNHFw",
+      // Prod Version 25 🟢 👇
+      deployId: " "AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ",
     })
   }
 
