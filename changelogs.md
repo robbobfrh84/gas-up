@@ -15,6 +15,19 @@ NOTE: Logs added in descending order(newest up top)
   -
 
 ----
+
+### v1.1.0 (22)
+Single User Auth Addition
+- Commit Sha:
+- Deploy Version: Version 22 on Mar 16, 7:46 AM
+- Permanent URL Version ID(Version ??): ``
+- Client Side `Gasup_vX.X.X.js` added (ONLY IF IT WAS CHANGED!)
+- Updated
+  - ... like, did you update the version for "GAS Up starter 13 -> to -> 16"?
+  - ... example: "tobob.earth: client `gasup.js` -> v1.0.2 -> v1.0.3"
+- NOTES:
+  -
+  
 ### v1.0.4 (20)
 Adding Increment value to an update row value
 - Commit Sha: e19abe52a5196f19b52ebf5861410b2462c5b2d7
