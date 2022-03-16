@@ -20,7 +20,7 @@ NOTE: Logs added in descending order(newest up top)
 Single User Authentication Addition
 - Commit Sha: 2638bf02b55a38649a7b91efb7d1175ac92559e5
 - Deploy Version: Version 22 on Mar 16, 7:46 AM
-- Permanent URL Version ID(23): `AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ`
+- Permanent URL Version ID(25): `AKfycbwu9tQSLZ-AXYs8h6nVuqxb_zdi6gmHnjPKOw4udfGGNybtTGAk8rKiFIHIxkZhog0uIQ`
 - Client Side `Gasup_v1.1.0.js` 
 - Updated
   - Client side gets addition of `app` as a top level parameter in requests, same level as scope & request
