@@ -1,5 +1,5 @@
 /*
-   GAS Up ⛽️ 🚀 VERSION 1.0.4
+  GAS Up ⛽️ 🚀 HEAD
 */
 
 class Gasup {

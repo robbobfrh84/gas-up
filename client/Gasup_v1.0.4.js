@@ -1,5 +1,5 @@
 /*
-   This Script was last changed when updated with GAS Up ⛽️ 🚀 VERSION 1.0.0
+  GAS Up ⛽️ 🚀 VERSION 1.0.4
 */
 
 class Gasup {
