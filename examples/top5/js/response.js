@@ -1,7 +1,7 @@
 const response = {
 
   build_page: function(app, rows) {
-    if (rows) { console.log("\n\n"+JSON.stringify(rows)+"\n\n" ) }
+    if (rows) { console.log(" * \n\n"+JSON.stringify(rows)+"\n\n" ) }
     rows = rows || app.static.movies.rows
     rank_page.innerHTML = ""
     rows.forEach( (row, i) => page_rank_builder(app, row,i) )

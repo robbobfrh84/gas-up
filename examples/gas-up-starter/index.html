@@ -37,7 +37,15 @@
 
 const deployId = "<?gasupTemplate-deployId/>"
 const id = "<?gasupTemplate-id/>"
-const gasup = new Gasup({ deployId, id })
+const gasup = new Gasup({ deployId, id, app: { name: "My GAS Up App"} })
+/* 👇 Example For Single User app 👇 */
+// const gasup = new Gasup({ deployId, id,
+//   app: {
+//     name: "My GAS Up App"
+//     password: "12345"
+//   }
+// })
+
 
 function requests(request) {
   loader.style.display = "block"

@@ -1,5 +1,5 @@
 /*
-   GAS Up ⛽️ 🚀 VERSION 1.04
+   This Script was last changed when updated with GAS Up ⛽️ 🚀 VERSION 1.0.0
 */
 
 class Gasup {
@@ -29,7 +29,6 @@ class Gasup {
     let url = this.baseUrl + "?request=" + request
     url += "&scope=" + scope
     url += "&id=" + this.id
-    if (this.app) { url += "&app=" + JSON.stringify(this.app) }
     url += this.queryString(options)
     return new Promise( (res, rej) => {
       fetch(url)

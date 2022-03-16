@@ -1,10 +1,10 @@
 function getStaticJson_JSON() { getStaticJson("json") }
 function getStaticJson_js() { getStaticJson("js") }
 
-function getStaticJson(type) {
+function getStaticJson(type, justReturn) {
   const gsheet = SpreadsheetApp.getActiveSpreadsheet()
   const id = gsheet.getId()
-  const ui = SpreadsheetApp.getUi()
+  const ui = SpreadsheetApp.getUi() // Refactor 🚨 I don't think I use this???
 
   const gsheetRequest = { id,
     request: "read",
@@ -25,6 +25,10 @@ function getStaticJson(type) {
     const sheetObject = api_sheets_db.sheet.read(sheetRequest)
     jsonObject.sheets.push(sheetObject)
   })
+
+  if (justReturn) {
+    return jsonObject
+  }
 
   const htmlTemplate = HtmlService.createTemplateFromFile(
     'Apps_Script/add_ons/download.html'

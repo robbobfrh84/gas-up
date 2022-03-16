@@ -16,7 +16,7 @@ const request = {
 
   error: function(error, callback, { loader, lId } ) {
     loader.off(lId)
-    console.log("❌😵‍💫 GAS Up > error :", error)
+    console.log(" * ❌😵‍💫 GAS Up > error :", error)
   }
 
 }
