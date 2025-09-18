@@ -1,4 +1,4 @@
-const build_border = function(app) {
+const build_border = function() {
 
   const bg = {
     primary: "#6495ed",

@@ -1,17 +1,30 @@
 const request = {
 
-  page: function(app, callback) {
+  page: function(callback) {
     const loader = setloader(_loader, "loader1")
     app.gasup.read.sheet({ sheetId: app.sheetId })
-      .then( resp => this.success(app, resp.data.rows, callback, loader) )
+      .then( resp => this.success(resp.data.rows, callback, loader) )
       .catch( error => this.error(error, callback, loader))
+  },
+
+  vote: function(callback, rowId) {
+    const loader = setloader(_loader, "loader1")
+    app.gasup.update.row({ 
+      sheetId: app.sheetId, 
+      rowId: rowId,
+      type: {
+        increment: "stars"
+      }
+    })
+    .then( resp => this.success(resp.data, callback, loader) )
+    .catch( error => this.error(error, callback, loader))
   },
 
 
 /* 🐣 Response result handlers 🐣 */
-  success: function(app, data, callback, { loader, lId } ) {
+  success: function(data, callback, { loader, lId } ) {
     loader.off(lId)
-    callback(app, data)
+    callback(data)
   },
 
   error: function(error, callback, { loader, lId } ) {

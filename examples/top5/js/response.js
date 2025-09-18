@@ -1,25 +1,22 @@
 const response = {
 
-  build_page: function(app, rows) {
-    if (rows) { console.log(" * \n\n"+JSON.stringify(rows)+"\n\n" ) }
-    rows = rows || app.static.movies.rows
+  build_page: function(rows) {
+    if (rows) { console.log(rows) }
+    app.rows = rows || app.static.movies.rows
     rank_page.innerHTML = ""
-    rows.forEach( (row, i) => page_rank_builder(app, row,i) )
+    app.rows.sort((a, b) => b.stars - a.stars)
+    app.rows.forEach( (row, i) => page_rank_builder(row,i) )
   },
 
 }
 
-const page_rank_builder = function(app, row, i) {
+const page_rank_builder = function(row, i) {
   let doBuild = true
 
   if (row.poster[0] == "=") {
     row.poster = row.poster.split('"')[1]
   }
-
-  if (!app.show.includes(row.rank)) {
-    doBuild = false
-  }
-
+  
   if (doBuild) {
     const title = /*html*/`
       <div class="rank-card_title"><div>
@@ -58,12 +55,15 @@ const page_rank_builder = function(app, row, i) {
                 </a>
               </div>
             </th>
-            <th class="rank-card_table-tweet">
+            <th class="rank-card_table-vote" onclick="vote(${i})">
               <div>
-                <a href="${row.tweet}" target="_none">
-                  <div> argue: </div>
-                  <img src="gfx/twitter_icon.svg" alt="Twitter Icon"/>
-                </a>
+                <div>
+                  <div> Vote </div>
+                  <img id="${'rankCardStar'+i}" src="gfx/star.png" alt="Star Icon"/>
+                  <div id="${'rankCardCount'+i}">
+                    (${row.stars})
+                  </div>
+                </div>
               </div>
             </th>
           </tr>
@@ -72,7 +72,7 @@ const page_rank_builder = function(app, row, i) {
 
       <div class="rank-card_rank">
         <div>
-          <span>#</span><span>${row.rank}</span>
+          <span>#</span><span>${i+1}</span>
         </div>
       </div>
 
@@ -92,4 +92,13 @@ const page_rank_builder = function(app, row, i) {
     },200*i)
   }
 
+}
+
+const vote = function(id) {
+  const star = window["rankCardStar"+id]
+  star.src = "gfx/star_filled.png"
+  request.vote((data)=>{
+    app.rows[id] = data.currentRow.rowObj
+    response.build_page(app.rows)
+  }, app.rows[id].rowId)
 }

@@ -1,4 +1,4 @@
-const build_title = function(app) {
+const build_title = function() {
 
   const title = {
     name: app.title,
@@ -98,7 +98,7 @@ const build_title = function(app) {
     frontTitleLayer.style.color = title.primary
     frontTitleLayer.onclick = function() {
       app.animate = !app.animate
-      build_user_interface(app)
+      build_user_interface()
     }
     title_allLayers.appendChild(frontTitleLayer)
 

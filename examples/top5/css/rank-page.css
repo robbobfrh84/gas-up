@@ -31,6 +31,7 @@
   right: 0px;
   border-left: 3px solid var(--primary_border);
   height: 100%;
+  width: 60px;
 }
 
 .rank-card_poster > img {
@@ -50,7 +51,7 @@
   border-radius: 0px 0px 3px 0px;
   display: table;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
   box-shadow: 0px 0px 0px rgba(0,0,0,0.7);
   transition: width 1s, height 1s, box-shadow 1s;
 }
@@ -80,7 +81,7 @@
   padding-right: 100px;
   padding-left: 20px;
   text-align: left;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: padding-left .3s;
 }
 
@@ -104,18 +105,18 @@
 /* 🏂 🏂 HOVERS 🏂 🏂 */
 
 .rank-card:hover {
-  height: 130px !important;
-  transition: height .3s;
+  /* height: 120px !important;
+  transition: height .3s; */
 }
 .rank-card:hover .rank-card_rank {
-  width: 80px !important;
-  height: 80px !important;
+  width: 60px !important;
+  height: 60px !important;
   box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.3);
   transition: width .3s, height .3s, box-shadow .3s;
 }
 .rank-card:hover .rank-card_rank > div {
-  font-size: 40px !important;
-  transition: font-size .3s;
+  /* font-size: 40px !important;
+  transition: font-size .3s; */
 }
 .rank-card:hover .rank-card_title {
   left: 65px;
@@ -126,15 +127,15 @@
   font-size: 27px !important;
   transition: font-size .3s;
 }
-.rank-card:hover .rank-card_table-amazon > div > a > div,
-.rank-card:hover .rank-card_table-tweet > div > a > div {
+/* .rank-card:hover .rank-card_table-amazon > div > a > div,
+.rank-card:hover .rank-card_table-vote > div > div > div {
   top: 10px;
   transition: top .3s;
 }
 .rank-card:hover .rank-card_table-amazon > div > a > img,
-.rank-card:hover .rank-card_table-tweet > div > a > img {
+.rank-card:hover .rank-card_table-vote > div > div > img {
   padding-top: 4px;
   width: 36px;
   height: 36px;
   transition: width .3s, height .3s, padding-top .3s;
-}
+} */

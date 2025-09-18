@@ -38,27 +38,27 @@
 }
 
 .rank-card_table-amazon,
-.rank-card_table-tweet {
+.rank-card_table-vote {
   text-align: center;
 }
 .rank-card_table-amazon > div,
-.rank-card_table-tweet > div {
+.rank-card_table-vote > div {
   height: 100%;
   width: 100%;
   display: table;
   overflow: hidden;
 }
 .rank-card_table-amazon > div > a,
-.rank-card_table-tweet > div > a  {
+.rank-card_table-vote > div > div  {
   display: table-cell;
   vertical-align: middle;
   background-color: rgba(0,100,0,0.15);
   border-radius: 10px 10px 0px 0px;
   text-decoration: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .rank-card_table-amazon > div > a > div,
-.rank-card_table-tweet > div > a > div {
+.rank-card_table-vote > div > div > div {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
@@ -67,8 +67,13 @@
   top: 5px;
   transition: top .3s;
 }
+.rank-card_table-vote > div > div > div,
+.rank-card_table-vote > div > div {
+  cursor: pointer;
+}
+
 .rank-card_table-amazon > div > a > img,
-.rank-card_table-tweet > div > a > img {
+.rank-card_table-vote > div > div > img {
   position: relative;
   left: 3px;
   padding-top: 4px;
@@ -77,6 +82,6 @@
   transition: width .3s, height .3s, top .3s;
 }
 
-.rank-card_table-tweet > div > a  {
+.rank-card_table-tweet > div > div  {
   background-color: rgba(0,0,150,0.1);
 }
